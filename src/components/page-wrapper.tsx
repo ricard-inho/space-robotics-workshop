@@ -96,7 +96,7 @@ export default class PageWrapper extends React.Component<
     return (
       <>
         <Helmet>
-          <title>Embodied AI Workshop</title>
+          <title>Space Robotics Workshop</title>
         </Helmet>
         <Header
           conference={this.props.conference}
@@ -131,19 +131,19 @@ export default class PageWrapper extends React.Component<
         </div>
         <footer>
           <a
-            href="//github.com/embodied-ai-workshop/embodied-ai.org"
+            href="//github.com/ricard-inho/space-robotics-workshop"
             target="_blank"
           >
             <GithubFilled className={style.footerIcon} />
           </a>
           <a
-            href="//www.youtube.com/channel/UCoMZfljfYHVWr1BCoQ9AGzA"
+            href="//"
             target="_blank"
           >
             <YoutubeFilled className={style.footerIcon} />
           </a>
           <a
-            href="//join.slack.com/t/embodied-aiworkshop/shared_invite/zt-s6amdv5c-gBZQZ7YSktrD_tMhQDjDfg"
+            href="//"
             target="_blank"
           >
             <SlackOutlined className={style.footerIcon} />

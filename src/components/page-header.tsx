@@ -71,45 +71,10 @@ export const OtherYears = (props: { onConference: string }) => (
       content={
         <div>
           <div>
-            {props.onConference === "CVPR 2025" ? (
-              <>CVPR 2025</>
+            {props.onConference === "Space Robotics 2025" ? (
+              <>Space Robotics 2025</>
             ) : (
-              <Link to="/cvpr2025">CVPR 2025</Link>
-            )}
-          </div>
-          <div>
-            {props.onConference === "CVPR 2024" ? (
-              <>CVPR 2024</>
-            ) : (
-              <Link to="/cvpr2024">CVPR 2024</Link>
-            )}
-          </div>
-          <div>
-            {props.onConference === "CVPR 2023" ? (
-              <>CVPR 2023</>
-            ) : (
-              <Link to="/cvpr2023">CVPR 2023</Link>
-            )}
-          </div>
-          <div>
-            {props.onConference === "CVPR 2022" ? (
-              <>CVPR 2022</>
-            ) : (
-              <Link to="/cvpr2022">CVPR 2022</Link>
-            )}
-          </div>
-          <div>
-            {props.onConference === "CVPR 2021" ? (
-              <>CVPR 2021</>
-            ) : (
-              <Link to="/cvpr2021">CVPR 2021</Link>
-            )}
-          </div>
-          <div>
-            {props.onConference === "CVPR 2020" ? (
-              <>CVPR 2020</>
-            ) : (
-              <Link to="/cvpr2020">CVPR 2020</Link>
+              <Link to="/spacerobotics2025">Space Robotics 2025</Link>
             )}
           </div>
         </div>
@@ -129,7 +94,7 @@ export const OtherYears = (props: { onConference: string }) => (
           }
         `}
       >
-        <DownOutlined style={{ fontSize: "14px" }} /> Embodied AI Workshops
+        <DownOutlined style={{ fontSize: "14px" }} /> Space Robotics Workshops
       </Button>
     </Popover>
   </div>
@@ -158,11 +123,11 @@ export const Header = (props: {
       <div className={style.headerContent}>
         {props.leftSide}
         <div className={style.middle}>
-          <div className={style.workshopTitle}>Embodied AI Workshop</div>
+          <div className={style.workshopTitle}>Space Robotics Workshop</div>
           <div className={style.conference}>{props.conference}</div>
         </div>
         {props.rightSide}
-        <div id="headerContainer" {...props.headerContainer}> 
+        <div id="headerContainer" {...props.headerContainer}>
           <div {...props.imageContent} />
         </div>
       </div>

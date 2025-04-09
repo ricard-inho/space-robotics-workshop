@@ -3,9 +3,7 @@
     "baseUrl": ".",
     "jsx": "react",
     "esModuleInterop": true,
-    "types": [
-      "@emotion/react/types/css-prop"
-    ],
+    "types": ["@emotion/react/types/css-prop"],
     "target": "ES2022"
   }
 }

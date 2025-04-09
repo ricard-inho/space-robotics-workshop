@@ -8,13 +8,13 @@ const IndexPage = () => {
   // const currentYear = new Date().getFullYear();
   // const redirectYear = process.env.GATSBY_REDIRECT_YEAR || currentYear; // Default to the current year
   const redirectYear = "2025";
-  const targetPage = `/cvpr${redirectYear}/`;
-  
+  const targetPage = `/spacerobotics${redirectYear}/`;
+
   React.useEffect(() => {
     navigate(targetPage);
   }, [targetPage]);
-  
-  return <p>Redirecting to CVPR {redirectYear} ...</p>
+
+  return <p>Redirecting to Space Robotics {redirectYear} ...</p>;
 };
 
 export default IndexPage;
