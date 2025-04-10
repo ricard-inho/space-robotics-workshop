@@ -16,6 +16,8 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import moment from "moment-timezone";
 import Img, { FixedObject, FluidObject } from "gatsby-image";
 
+import bannerImage from '/static/images/spacerobotics2025/srw25-banner-3.png';
+
 import SlackLogo from "../../static/icons/slack.svg";
 
 const { Step } = Steps;
@@ -791,7 +793,7 @@ export default function Home({ data }) {
           margin-top: 5px;
           margin-left: -15%;
           margin-bottom: -15px;
-          background-image: url("/images/spacerobotics2025/cover_4.png");
+          background-image: url(${bannerImage});
           background-size: cover;
           background-position: center;
         `,
