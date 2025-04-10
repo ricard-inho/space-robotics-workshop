@@ -776,7 +776,7 @@ export default function Home({ data }) {
       // headerGradient="linear-gradient(0deg, #1f2f3f, #100b0f)"
       // 2024 variant
       // headerGradient="radial-gradient(#330066, #ff9933)"
-      headerGradient="linear-gradient(0deg,rgb(46, 25, 11),rgb(0, 0, 0))"
+      headerGradient="linear-gradient(0deg, rgb(255, 255, 255), rgb(112, 143, 228))"
       headerStyle={css`
         color: ${color.dark.gold10} !important;
         button {
