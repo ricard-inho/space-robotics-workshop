@@ -1137,6 +1137,65 @@ export const query = graphql`
       ...FluidImage
     }
 
+    # Scientific committee pictures
+    edwardBalabanOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    jenBlankOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    giuseppeCataldoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    jeanPierreDeLaCroixOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    animeshGargOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    keerthanaGopalakrishnanOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    jenHeldmannOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    pyojinKimOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    jonathanKnowlesOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    robertoLamparielloOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    alisonLowndesOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    luisMerinoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    hiroOnoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    katherineScottOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    luisSentisOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    treySmithOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    johnathanStockOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    kentaroUnoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+    rodrigoVenturaOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FluidImage
+    }
+
 
     # Other pictures
     ariaDemo: file(relativePath: { eq: "cvpr2024/aria-demo.jpg" }) {
