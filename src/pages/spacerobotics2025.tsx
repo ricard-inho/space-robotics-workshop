@@ -17,6 +17,8 @@ import moment from "moment-timezone";
 import Img, { FixedObject, FluidObject } from "gatsby-image";
 
 import bannerImage from '../../static/images/spacerobotics2025/srw25-banner-3.png';
+import NVIDIA from "../../static/images/sponsors/nvidia.svg";
+import SOFTSERVE from "../../static/images/sponsors/softserve-logo-big.png";
 
 import SlackLogo from "../../static/icons/slack.svg";
 
@@ -997,27 +999,15 @@ export default function Home({ data }) {
         </p>
         <p>
           <center>
-            <a href="https://www.nvidia.com/">
-              <img src="/images/sponsors/logical-robotics.png" height="150" alt="Logical Robotics"/>
-            </a>
+            <div className={style.sponsorContainer} style={{ textAlign: "center" }}>
+              <a href="https://www.nvidia.com/" target="_blank">
+                <img src={NVIDIA} alt="NVIDIA" className={style.nvidia} />
+              </a>
 
-            <a href="https://microsoft.com/">
-              <img src="/images/sponsors/microsoft-logo.png" height="300" alt="Microsoft"/>
-            </a>
-            
-            <table>
-              <tr>
-                <td>
-                  <center>
-                    <a href="https://www.projectaria.com/">
-                      <img src="/images/sponsors/project_aria.png" height="150" alt="Project Aria"/>
-                      <br></br>
-                      Project Aria
-                    </a>
-                  </center>
-                </td>
-              </tr>
-            </table>
+              <a href="https://www.softserveinc.com/" target="_blank">
+                <img src={SOFTSERVE} alt="SOFTSERVE" className={style.softserve} />
+              </a>
+            </div>
           </center>
         </p>
       </Section>

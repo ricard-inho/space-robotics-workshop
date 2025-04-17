@@ -268,12 +268,12 @@
     opacity: 0.9;
   }
 
-  .googleCloud {
-    height: 50px;
+  .nvidia {
+    height: 85px;
     padding: 0px 25px;
   }
 
-  .nvidia {
+  .softserve {
     height: 85px;
     padding: 0px 25px;
   }
@@ -283,8 +283,9 @@
       width: 30%;
     }
 
-    .googleCloud {
-      width: 60%;
+    .softserve {
+      width: 30%;
     }
+
   }
 }
