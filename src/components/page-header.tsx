@@ -6,9 +6,7 @@ import { DownOutlined, RightOutlined, LeftOutlined } from "@ant-design/icons";
 import SeattleCover from "../../static/images/cvpr2020/cover-transparent.svg";
 import { css } from "@emotion/react";
 
-// This will eventually show the 2021 challenges as a dropdown
-// on the header row. 2021 info coming soon!
-// For now, it's still in place so that the title is centered.
+//Show the challenges as a dropdown
 export const Challenges = (props: {
   onLeft?: boolean;
   conference: string;

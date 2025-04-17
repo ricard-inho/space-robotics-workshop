@@ -136,18 +136,6 @@ export default class PageWrapper extends React.Component<
           >
             <GithubFilled className={style.footerIcon} />
           </a>
-          <a
-            href="//"
-            target="_blank"
-          >
-            <YoutubeFilled className={style.footerIcon} />
-          </a>
-          <a
-            href="//"
-            target="_blank"
-          >
-            <SlackOutlined className={style.footerIcon} />
-          </a>
         </footer>
       </>
     );

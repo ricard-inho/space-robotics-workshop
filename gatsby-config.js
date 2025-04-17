@@ -15,7 +15,7 @@ spacerobotics2025metadata = {
       lo: true,
       organization: "Nasa Ames",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/ilopezfrancos/",
     },
     {
       challenge: false,
@@ -25,7 +25,7 @@ spacerobotics2025metadata = {
       lo: true,
       organization: "Nasa Ames",
       sab: false,
-      site: "",
+      site: "https://brian.coltin.org/",
     },
     {
       challenge: true,
@@ -35,7 +35,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "Nasa JSC",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/samuel-alex-sowell-07695671/",
     },
     {
       challenge: false,
@@ -45,7 +45,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "Nasa JPL",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/robroyce/",
     },
     {
       challenge: false,
@@ -55,7 +55,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "Nasa JPL",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/kaufmann-space",
     },
     {
       challenge: false,
@@ -65,7 +65,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "Redwire",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/kuldeepbarad/",
     },
     {
       challenge: false,
@@ -75,7 +75,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "University of Luxembourg",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/ricard-marsal-44ba63155/",
     },
     {
       challenge: true,
@@ -85,7 +85,7 @@ spacerobotics2025metadata = {
       lo: false,
       organization: "Stanford University",
       sab: false,
-      site: "",
+      site: "https://www.linkedin.com/in/maggie-wang/",
     },
   ],
 };

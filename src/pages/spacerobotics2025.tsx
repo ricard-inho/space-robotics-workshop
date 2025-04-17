@@ -16,7 +16,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import moment from "moment-timezone";
 import Img, { FixedObject, FluidObject } from "gatsby-image";
 
-import bannerImage from '/static/images/spacerobotics2025/srw25-banner-3.png';
+import bannerImage from '../../static/images/spacerobotics2025/srw25-banner-3.png';
 
 import SlackLogo from "../../static/icons/slack.svg";
 
@@ -243,7 +243,7 @@ function ChallengeSpotlight(props: {
 const challengePageMap = {
   CHALLENGE_TODO: (
     <a href="" target="_blank">
-      CHALLENGE_TODO
+      Comming Soon
     </a>
   ),
 };
@@ -776,7 +776,11 @@ export default function Home({ data }) {
       // headerGradient="linear-gradient(0deg, #1f2f3f, #100b0f)"
       // 2024 variant
       // headerGradient="radial-gradient(#330066, #ff9933)"
-      headerGradient="linear-gradient(0deg, rgb(255, 255, 255), rgb(112, 143, 228))"
+      //headerGradient="linear-gradient(0deg, rgb(255, 255, 255), rgb(112, 143, 228))"
+      headerGradient=" radial-gradient(at top left, rgb(51, 52, 53), transparent 50%), 
+                radial-gradient(at top right, rgb(67, 83, 86), transparent 50%), 
+                radial-gradient(at bottom left, rgb(149, 140, 124), transparent 50%), 
+                radial-gradient(at bottom right, rgb(160, 201, 206), transparent 50%)"
       headerStyle={css`
         color: ${color.dark.gold10} !important;
         button {
@@ -824,15 +828,19 @@ export default function Home({ data }) {
           servicing to complex assembly, manufacturing, and the utilization of
           in-situ resources (ISRU) for sustainable operations. Moreover,
           comprehensive exploration missions to lunar and planetary surfaces are
-          becoming increasingly reliant on these robotic systems. This new era
-          emphasizes the growing need for a shift from human-operated systems to
+          becoming increasingly reliant on these robotic systems. 
+          <br />
+          <br />
+          This new era emphasizes the growing need for a shift from human-operated systems to
           semi-autonomous and eventually fully autonomous space robotics,
           powered by advanced AI technologies. Developing these AI systems
           demand new key challenges, including extensive and diverse datasets
           for training and validation, physically realistic simulators,
           energy-optimized edge computing, and self-verification and
-          trustworthines of these algorithms. Our workshop aims to address the
-          broad spectrum of opportunities and challenges presented by this new
+          trustworthines of these algorithms. 
+          <br />
+          <br />
+          Our workshop aims to address the broad spectrum of opportunities and challenges presented by this new
           era of space exploration by bringing together experts in terrestrial
           robotics, space robotics, AI, mission operations, and flight software.
           Discussions will focus on: the specific requirements of space
@@ -840,7 +848,7 @@ export default function Home({ data }) {
           and benefit from unified frameworks. The workshop will facilitate
           collaborative discussions, highlight current developments, identify
           key challenges, and strategize on the necessary research to advance
-          robotics and autonomy in future space missions. The Spacer Robotics
+          robotics and autonomy in future space missions. The Space Robotics
           2025 workshop will be held in conjunction with{" "}
           <a href="https://2025.smcit-scc.space/">SMC-IT/SCC 2025</a> in Los
           Angeles, California, USA. It will feature a host of invited talks
@@ -892,12 +900,6 @@ export default function Home({ data }) {
             <b>Workshop Talks: 10:30AM-5:15PM PT - TBD</b>
           </li>
         </ul>
-      </Section>
-      <Section title="Sponsor Events">
-        <p>
-          Stay tuned for information about events associated with our sponsors!
-        </p>
-        <br />
       </Section>
 
       <Section title="Call for Papers">
@@ -993,7 +995,31 @@ export default function Home({ data }) {
           The Space Robotics 2025 Workshop is sponsored by the following
           organizations:
         </p>
-        <p></p>
+        <p>
+          <center>
+            <a href="https://www.nvidia.com/">
+              <img src="/images/sponsors/logical-robotics.png" height="150" alt="Logical Robotics"/>
+            </a>
+
+            <a href="https://microsoft.com/">
+              <img src="/images/sponsors/microsoft-logo.png" height="300" alt="Microsoft"/>
+            </a>
+            
+            <table>
+              <tr>
+                <td>
+                  <center>
+                    <a href="https://www.projectaria.com/">
+                      <img src="/images/sponsors/project_aria.png" height="150" alt="Project Aria"/>
+                      <br></br>
+                      Project Aria
+                    </a>
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </center>
+        </p>
       </Section>
 
       <Section title="Organizers">
@@ -1099,7 +1125,7 @@ export const query = graphql`
     ignacioGLopezFrancosOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FluidImage
     }
-    brianColtinOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    brianColtinOrg: file(relativePath: { eq: "organizers/brianColtin.jpeg" }) {
       ...FluidImage
     }
     alexSowellOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
@@ -1108,21 +1134,19 @@ export const query = graphql`
     robRoyceOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FluidImage
     }
-    marcelKaufmannOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    marcelKaufmannOrg: file(relativePath: { eq: "organizers/marcelKaufmann.jpeg" }) {
       ...FluidImage
     }
-    kuldeepRambhaiOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    kuldeepRambhaiOrg: file(relativePath: { eq: "organizers/kuldeepRambhai.jpeg" }) {
       ...FluidImage
     }
-    ricardMarsalOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    ricardMarsalOrg: file(relativePath: { eq: "organizers/ricardMarsal.jpeg" }) {
       ...FluidImage
     }
     maggieWangOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FluidImage
     }
-    devendraOrg: file(relativePath: { eq: "organizers/devendra.jpg" }) {
-      ...FluidImage
-    }
+
 
     # Other pictures
     ariaDemo: file(relativePath: { eq: "cvpr2024/aria-demo.jpg" }) {
