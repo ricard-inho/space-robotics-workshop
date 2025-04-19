@@ -8,7 +8,7 @@ import PageWrapper from "../components/page-wrapper";
 
 import color from "../components/color";
 import { Challenges } from "../components/page-header";
-import { Table, Steps, Timeline } from "antd";
+import { Table, Steps, Timeline, Alert } from "antd";
 import LaunchIcon from "@material-ui/icons/Launch";
 import ReceiptIcon from "@material-ui/icons/Receipt";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
@@ -157,7 +157,7 @@ export function Video(props: {
   url: string;
   children: React.ReactNode;
 }) {
-  const [videoHovered, setVideoHovered] = useState(false);
+  const [videoHovered, setVideoHovered] = React.useState(false);
   return (
     <a href={props.url} target="_blank">
       <div className={style.videoWrapper}>
@@ -738,10 +738,12 @@ export default function Home({ data }) {
   const [windowWidth, setWindowWidth] = React.useState(getWindowWidth());
 
   React.useEffect(() => {
-    const resizeWindow = () => setWindowWidth(getWindowWidth());
-    window.addEventListener("resize", resizeWindow);
-    return () => window.removeEventListener("resize", resizeWindow);
-  });
+    const handleResize = () => {
+      setWindowWidth(getWindowWidth());
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const challengeData = [
     {
@@ -757,10 +759,6 @@ export default function Home({ data }) {
       winner: "",
     },
   ];
-
-  // useEffect(() => {
-  //   setPaperOrder(prevOrder => shuffle(prevOrder));
-  // }, []);
 
   // using 4:59 since PST is 5 hours behind AoE.
   const paperDeadline = moment.tz("2022-05-17 04:59", "America/Los_Angeles");
@@ -814,48 +812,16 @@ export default function Home({ data }) {
     >
       <Section title="Overview">
         <p>
-          The field of space robotics is entering a transformative era marked by
-          an array of ambitious missions and global collaborations. This period
-          is characterized by significant advancements in robotic missions to
-          celestial bodies such as the Moon, Mars, and beyond - exemplified by
-          programs like NASA's VIPER, Artemis campaign, Psyche, Mars Sample
-          Return, and future explorations of Jupiter's icy moons like Europa,
-          and Saturn's Enceladus and Titan moons. Further propelling this
-          advancement is the collaboration between NASA, commercial entities -
-          through initiatives like CLPS - and international partners, all
-          converging to support these ambitious endeavors. In this context, the
-          scope of applications for space robotics is expanding exponentially.
-          Robots, varying in design and function, are being tasked with a
-          spectrum of critical roles - from station keeping and in-space
-          servicing to complex assembly, manufacturing, and the utilization of
-          in-situ resources (ISRU) for sustainable operations. Moreover,
-          comprehensive exploration missions to lunar and planetary surfaces are
-          becoming increasingly reliant on these robotic systems. 
-          <br />
-          <br />
-          This new era emphasizes the growing need for a shift from human-operated systems to
-          semi-autonomous and eventually fully autonomous space robotics,
-          powered by advanced AI technologies. Developing these AI systems
-          demand new key challenges, including extensive and diverse datasets
-          for training and validation, physically realistic simulators,
-          energy-optimized edge computing, and self-verification and
-          trustworthines of these algorithms. 
-          <br />
-          <br />
-          Our workshop aims to address the broad spectrum of opportunities and challenges presented by this new
-          era of space exploration by bringing together experts in terrestrial
-          robotics, space robotics, AI, mission operations, and flight software.
-          Discussions will focus on: the specific requirements of space
-          applications, how they can leverage shared technological solutions,
-          and benefit from unified frameworks. The workshop will facilitate
-          collaborative discussions, highlight current developments, identify
-          key challenges, and strategize on the necessary research to advance
-          robotics and autonomy in future space missions. The Space Robotics
-          2025 workshop will be held in conjunction with{" "}
-          <a href="https://2025.smcit-scc.space/">SMC-IT/SCC 2025</a> in Los
-          Angeles, California, USA. It will feature a host of invited talks
-          covering a variety of topics in Space Robotics, spotlight
-          presentations, and panel discussions.
+          The <strong>2nd Space Robotics Workshop (SRW)</strong> will be held in conjunction with the <strong>IEEE SMC-IT/SCC</strong> from <strong>July 28th to 29th 2025</strong>, at the California Science Center in <strong>Los Angeles, CA</strong>. The workshop will bring together experts in robotics, autonomy, AI, and aerospace to shape the next era of innovation driving our return to the Moon, the sustainable exploration of Mars and beyond, and the expansion of commercial activity beyond Earth orbit.
+        </p>
+        <p>
+          As national space agencies and commercial ventures capitalize on next-generation robotics, we stand at a critical juncture. Increasing mission complexity, evolving space architectures, expanding commercial services, and the rapid progress in AI present both unprecedented opportunities and new challenges in how we explore, operate, and build a sustainable space economy. Rapid advances in terrestrial robotics are directly influencing the development of space robotics and are poised to play a central role in enabling more autonomous, resilient, and ambitious missions, while also laying the groundwork for future off-world economic activities.
+        </p>
+        <p>
+          Building on the foundation laid during our <a href="https://2024.smcit-scc.space/workshop-srw.html" target="_blank" rel="noopener noreferrer">inaugural event</a>, this year's workshop will focus on the recent breakthroughs in the field of robotics, the current state of space robotics, the rise of the commercial space sector supporting the lunar economy, and emerging concepts aimed at enabling more capable, adaptable, and cost-effective missions.
+        </p>
+        <p>
+          The program will be organized around a set of focused technical sessions, with keynote talks, spotlight presentations, panels, and a poster session.
         </p>
       </Section>
       <Section title="Timeline">
@@ -905,91 +871,104 @@ export default function Home({ data }) {
       </Section>
 
       <Section title="Call for Papers">
+        <Alert
+          message={
+            <>
+              <strong>Paper submissions are now open through May 2nd, 2025!</strong>{" "}
+              <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
+                Submit here <LaunchIcon fontSize="inherit" />
+              </a>
+            </>
+          }
+          type="info"
+          showIcon
+          style={{ marginBottom: '1em' }}
+        />
         <p>
-          We invite high-quality up to 10 pages, not including references on
-          Space Robotics, especially in areas relevant to the themes of this
-          year's workshop:
+          We invite submissions on research and development at the intersection of robotics, autonomy, and space applications. Contributions should highlight innovative methods, systems, and technologies for exploration, in-space services, or science operations beyond Earth.
+        </p>
+        <p><strong>Relevant topics:</strong></p>
+        <ul>
+          <li>
+            Autonomous navigation and mobility for planetary and orbital environments, including terrain-relative localization, path planning, and novel locomotion systems (e.g., rovers, drones, subsurface robots).
+          </li>
+          <li>
+            Manipulation in space and planetary environments, including dexterous handling, microgravity operations, and contact dynamics in ISAM or EVA contexts.
+          </li>
+          <li>
+            In-space Servicing, Assembly, and Manufacturing (ISAM) and In-situ Resource Utilization (ISRU) enabled by robotic autonomy.
+          </li>
+          <li>
+            AI agents for perception, decision-making, task planning, and multi-robot coordination in space environments.
+          </li>
+          <li>
+            Foundation models and multimodal learning (vision-language-action) for general-purpose space robotic systems.
+          </li>
+          <li>
+            Photogrammetry, Neural Radiance Fields (NeRFs), 3D Gaussian Splatting (3DGS), and other volumetric representation techniques for environment modeling and scene understanding, particularly under challenging illumination conditions.
+          </li>
+          <li>
+            Human-robot teaming strategies for crewed and uncrewed missions, including shared autonomy, intent recognition, and adaptive interfaces.
+          </li>
+          <li>
+            Sim-to-real transfer, domain adaptation, and policy generalization for space-deployed systems.
+          </li>
+          <li>
+            High-fidelity simulation and digital twins for development, integration, testing, and mission rehearsal.
+          </li>
+          <li>
+            Long-duration autonomy and adaptive learning in unstructured, dynamic, or high-latency environments.
+          </li>
+          <li>
+            Autonomous surface operations, including science-driven exploration, sample collection, and real-time decision-making under resource constraints.
+          </li>
+          <li>
+            Spacecraft swarms and distributed robotic systems, including satellite formation flying, multi-agent planning, and inter-agent communication.
+          </li>
+          <li>
+            Space logistics, infrastructure deployment, and robotic construction, supporting scalable off-world operations.
+          </li>
+          <li>
+            System integration, testing, and field validation of space robotic platforms in analog or operational environments.
+          </li>
+          <li>
+            Mission concepts, technology demonstrations, and commercial initiatives accelerating the adoption of space robotics.
+          </li>
+          <li>
+            Trust, verification, and validation frameworks to ensure robust, explainable, and resilient autonomous behavior.
+          </li>
+        </ul>
+
+        <hr />
+
+        <SubSection title="Submission Guidelines">
           <ul>
             <li>
-              Autonomous navigation and manipulation for planetary/orbital
-              robots
+              Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
             </li>
             <li>
-              In-space Servicing, Assembly, and Manufacturing (ISAM) and In-situ
-              Resource Utilization (ISRU) powered by advanced autonomy
+              Submissions must be made through the <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. Please select the <strong>"Space Robotics Workshop"</strong> track.
             </li>
             <li>
-              AI agents for perception, planning, and multi-robot coordination
+              Authors may choose whether or not to include their paper in the <strong>IEEE conference proceedings</strong> (indexed in IEEE Xplore).
+              <ul>
+                <li>Papers selected for IEEE publication must be presented <strong>in person</strong> to comply with IEEE's "Podium and Publish" policy.</li>
+                <li>Authors who opt out of IEEE publication may still present at the workshop, preserving eligibility for future submission to archival journals or conferences. They may also be offered a slightly later submission deadline (after <strong>May 2, 2025</strong>), depending on review capacity.</li>
+              </ul>
             </li>
             <li>
-              Volumetric techniques (e.g., NeRFs, 3DGS) for space applications
-            </li>
-            <li>Foundation and language-vision-action models for robotics</li>
-            <li>
-              Human-robot teaming, shared autonomy, and intent recognition
+              All submissions will be <strong>peer reviewed</strong> for quality and relevance.
             </li>
             <li>
-              Sim-to-Real transfer and domain adaptation for space robotics
+              At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
             </li>
             <li>
-              High-fidelity simulation and digital twins for testing and
-              rehearsal
+              All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
             </li>
             <li>
-              Long-term autonomy and adaptive learning in dynamic environments
-            </li>
-            <li>
-              Autonomous surface ops: exploration, sampling, real-time decisions
-            </li>
-            <li>
-              Robotic platforms and control for Lunar, Martian, deep-space
-              missions
-            </li>
-            <li>
-              Mission concepts, tech demos, and commercial space robotics
-              efforts
-            </li>
-            <li>
-              Trust, verification, and validation for robust autonomous systems
+              Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More information will be shared at a later date.
             </li>
           </ul>
-          All accepted papers will be published in the IEEE conference
-          proceedings. All accepted papers will be presented as posters during
-          the workshop and will be included in the proceedings. A select number
-          of top submissions will also be invited for spotlight presentations as
-          part of the workshop program. Selected papers may be invited to appear
-          in a special issue of a reputable journal. More details will be made
-          available in the future. Submissions can be made through the EasyChair
-          portal at this{" "}
-          <a
-            href=" https://easychair.org/conferences/?conf=smcitscc2025"
-            target="_blank"
-          >
-            link
-          </a>{" "}
-          Be sure to select the <b>"Space Robotics Workshop"</b> track.
-        </p>
-        <SubSection title="Submission">
-          <p>
-            The submission deadline is <b>May 2nd</b> (
-            <a href="//time.is/Anywhere_on_Earth">Anywhere on Earth</a>). Papers
-            should be no longer than 10 pages (excluding references) and styled
-            in the{" "}
-            <a
-              href="https://www.ieee.org/conferences/publishing/templates.html"
-              target="_blank"
-            >
-              IEEE templates
-            </a>
-            .
-            <uL>
-              <li>
-                <a href="https://easychair.org/conferences/?conf=smcitscc2025">
-                  Paper submissions are now OPEN through May 2nd, 2025.
-                </a>
-              </li>
-            </uL>
-          </p>
         </SubSection>
       </Section>
       <Section title="Sponsors">
@@ -1013,11 +992,9 @@ export default function Home({ data }) {
       </Section>
 
       <Section title="Organizers">
-        The Embodied AI 2025 workshop is a joint effort by a large set of
-        researchers from a variety of organizations. Each year, a set of lead
-        organizers takes point coordinating with the CVPR conference, backed up
-        by a large team of workshop organizers, challenge organizers, and
-        scientific advisors.
+        <p>
+          The 2nd Space Robotics Workshop is a volunteer led effort by researchers and practitioners in the field of robotics, autonomy, and AI from multiple organizations. We are grateful to be supported by a Scientific Committee composed of leading experts across academia, industry, and government, who help ensure the quality, relevance, and impact of the program.
+        </p>
         <SubSection title="Organizing Committee">
           <OrganizerPics
             organizers={data.allSite.nodes[0].siteMetadata.spacerobotics2025.organizers
