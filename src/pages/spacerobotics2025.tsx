@@ -967,7 +967,7 @@ export default function Home({ data }) {
           >
             link
           </a>{" "}
-          Be sure to select the <b>“Space Robotics Workshop”</b> track.
+          Be sure to select the <b>"Space Robotics Workshop"</b> track.
         </p>
         <SubSection title="Submission">
           <p>
@@ -1018,37 +1018,22 @@ export default function Home({ data }) {
         organizers takes point coordinating with the CVPR conference, backed up
         by a large team of workshop organizers, challenge organizers, and
         scientific advisors.
-        <SubSection title="Lead Organizers">
-          <OrganizerPics
-            organizers={data.allSite.nodes[0].siteMetadata.spacerobotics2025.organizers
-              .filter((organizer: any) => organizer.lo === true)
-              .sort((a, b) => a.name.localeCompare(b.name))}
-            data={data}
-          />
-        </SubSection>
         <SubSection title="Organizing Committee">
           <OrganizerPics
             organizers={data.allSite.nodes[0].siteMetadata.spacerobotics2025.organizers
-              .filter(
-                (organizer: any) =>
-                  organizer.oc === true && organizer.lo === false
-              )
-              .sort((a, b) => a.name.localeCompare(b.name))}
+              .filter((organizer: any) => organizer.oc === true)
+              .sort((a, b) => {
+                if (a.name === "Ignacio G. López-Francos") return -1;
+                if (b.name === "Ignacio G. López-Francos") return 1;
+                return a.name.localeCompare(b.name);
+              })}
             data={data}
           />
         </SubSection>
-        <SubSection title="Challenge Organizers">
+        <SubSection title="Scientific Committee">
           <OrganizerPics
             organizers={data.allSite.nodes[0].siteMetadata.spacerobotics2025.organizers
-              .filter((organizer: any) => organizer.challenge === true)
-              .sort((a, b) => a.name.localeCompare(b.name))}
-            data={data}
-          />
-        </SubSection>
-        <SubSection title="Scientific Advisory Board">
-          <OrganizerPics
-            organizers={data.allSite.nodes[0].siteMetadata.spacerobotics2025.organizers
-              .filter((organizer: any) => organizer.sab === true)
+              .filter((organizer: any) => organizer.sc === true)
               .sort((a, b) => a.name.localeCompare(b.name))}
             data={data}
           />
@@ -1095,7 +1080,7 @@ export const query = graphql`
               imageId
               organization
               site
-              sab
+              sc
               oc
               lo
               challenge
@@ -1112,10 +1097,10 @@ export const query = graphql`
     
 
     # organizer pictures
-    ignacioGLopezFrancosOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    ignacioGLopezFrancosOrg: file(relativePath: { eq: "organizers/ignacioLF.png" }) {
       ...FluidImage
     }
-    brianColtinOrg: file(relativePath: { eq: "organizers/brianColtin.jpeg" }) {
+    brianColtinOrg: file(relativePath: { eq: "organizers/brianColtin.jpg" }) {
       ...FluidImage
     }
     alexSowellOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
