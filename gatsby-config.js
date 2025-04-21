@@ -235,8 +235,8 @@ const spacerobotics2025metadata = {
     },
     {
       challenge: false,
-      imageId: "johnathanStock",
-      name: "Johnathan Stock",
+      imageId: "jonathanStock",
+      name: "Jonathan Stock",
       oc: false,
       organization: "NASA ARC",
       sc: true,
