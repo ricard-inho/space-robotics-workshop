@@ -1105,64 +1105,63 @@ export const query = graphql`
     }
 
     # Scientific committee pictures
-    edwardBalabanOrg: file(relativePath: { eq: "organizers/scientific-committee/edwardBalaban.jpeg" }) {
+    edwardBalabanOrg: file(relativePath: { eq: "scientific-committee/edwardBalaban.jpeg" }) {
       ...FluidImage
     }
-    jenniferBlankOrg: file(relativePath: { eq: "organizers/scientific-committee/jenniferBlank.jpeg" }) {
+    jenniferBlankOrg: file(relativePath: { eq: "scientific-committee/jenniferBlank.jpeg" }) {
       ...FluidImage
     }
-    giuseppeCataldoOrg: file(relativePath: { eq: "organizers/scientific-committee/giuseppeCataldo.jpeg" }) {
+    giuseppeCataldoOrg: file(relativePath: { eq: "scientific-committee/giuseppeCataldo.jpeg" }) {
       ...FluidImage
     }
-    jeanPierreDeLaCroixOrg: file(relativePath: { eq: "organizers/scientific-committee/jeanPierreDeLaCroix.jpg" }) {
+    jeanPierreDeLaCroixOrg: file(relativePath: { eq: "scientific-committee/jeanPierreDeLaCroix.jpg" }) {
       ...FluidImage
     }
-    animeshGargOrg: file(relativePath: { eq: "organizers/scientific-committee/animeshGarg.jpg" }) {
+    animeshGargOrg: file(relativePath: { eq: "scientific-committee/animeshGarg.jpg" }) {
       ...FluidImage
     }
-    keerthanaGopalakrishnanOrg: file(relativePath: { eq: "organizers/scientific-committee/keerthanaGopalakrishnan.jpg" }) {
+    keerthanaGopalakrishnanOrg: file(relativePath: { eq: "scientific-committee/keerthanaGopalakrishnan.jpg" }) {
       ...FluidImage
     }
-    jenniferHeldmannOrg: file(relativePath: { eq: "organizers/scientific-committee/jenniferHeldmann.jpeg" }) {
+    jenniferHeldmannOrg: file(relativePath: { eq: "scientific-committee/jenniferHeldmann.jpeg" }) {
       ...FluidImage
     }
-    pyojinKimOrg: file(relativePath: { eq: "organizers/scientific-committee/pyojinKim.jpeg" }) {
+    pyojinKimOrg: file(relativePath: { eq: "scientific-committee/pyojinKim.jpeg" }) {
       ...FluidImage
     }
-    jonathanKnowlesOrg: file(relativePath: { eq: "organizers/scientific-committee/jonathanKnowles.jpeg" }) {
+    jonathanKnowlesOrg: file(relativePath: { eq: "scientific-committee/jonathanKnowles.jpeg" }) {
       ...FluidImage
     }
-    robertoLamparielloOrg: file(relativePath: { eq: "organizers/scientific-committee/robertoLampariello.jpeg" }) {
+    robertoLamparielloOrg: file(relativePath: { eq: "scientific-committee/robertoLampariello.jpeg" }) {
       ...FluidImage
     }
-    alisonLowndesOrg: file(relativePath: { eq: "organizers/scientific-committee/alisonLowndes.jpg" }) {
+    alisonLowndesOrg: file(relativePath: { eq: "scientific-committee/alisonLowndes.jpg" }) {
       ...FluidImage
     }
-    luisMerinoOrg: file(relativePath: { eq: "organizers/scientific-committee/luisMerino.jpeg" }) {
+    luisMerinoOrg: file(relativePath: { eq: "scientific-committee/luisMerino.jpeg" }) {
       ...FluidImage
     }
-    hiroOnoOrg: file(relativePath: { eq: "organizers/scientific-committee/hiroOno.jpg" }) {
+    hiroOnoOrg: file(relativePath: { eq: "scientific-committee/hiroOno.jpg" }) {
       ...FluidImage
     }
-    katherineScottOrg: file(relativePath: { eq: "organizers/scientific-committee/katherineScott.jpg" }) {
+    katherineScottOrg: file(relativePath: { eq: "scientific-committee/katherineScott.jpg" }) {
       ...FluidImage
     }
-    luisSentisOrg: file(relativePath: { eq: "organizers/scientific-committee/luisSentis.png" }) {
+    luisSentisOrg: file(relativePath: { eq: "scientific-committee/luisSentis.png" }) {
       ...FluidImage
     }
-    treySmithOrg: file(relativePath: { eq: "organizers/scientific-committee/treySmith.jpg" }) {
+    treySmithOrg: file(relativePath: { eq: "scientific-committee/treySmith.jpg" }) {
       ...FluidImage
     }
-    jonathanStockOrg: file(relativePath: { eq: "organizers/scientific-committee/jonathanStock.png" }) {
+    jonathanStockOrg: file(relativePath: { eq: "scientific-committee/jonathanStock.png" }) {
       ...FluidImage
     }
-    kentaroUnoOrg: file(relativePath: { eq: "organizers/scientific-committee/kentaroUno.png" }) {
+    kentaroUnoOrg: file(relativePath: { eq: "scientific-committee/kentaroUno.png" }) {
       ...FluidImage
     }
-    rodrigoVenturaOrg: file(relativePath: { eq: "organizers/scientific-committee/rodrigoVentura.jpg" }) {
+    rodrigoVenturaOrg: file(relativePath: { eq: "scientific-committee/rodrigoVentura.jpg" }) {
       ...FluidImage
     }
-
 
     # Other pictures
     ariaDemo: file(relativePath: { eq: "cvpr2024/aria-demo.jpg" }) {
