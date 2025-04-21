@@ -88,7 +88,6 @@ const spacerobotics2025metadata = {
       sc: false,
       site: "https://www.linkedin.com/in/maggie-wang/",
     },
-
     // Scientific Committee (keep oc: false, sc: true)
     {
       challenge: false,
