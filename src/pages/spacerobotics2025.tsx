@@ -35,29 +35,35 @@ import * as style from "./spacerobotics2025.module.scss";
 // These are for each organizer pic. They encompass the image,
 // name, organizations, and external URL when clicked.
 export const OrganizerPics = function (props: { organizers: any; data: any }) {
-    return (
-      <div className={style.organizerContainer}>
-        {props.organizers.map(organizer => {
-          return (
-            <div className={style.organizer} key={organizer.imageId}>
-              <div className={style.organizerPic}>
-                <a href={organizer.site} target="_blank">
-                  <Img
-                    fluid={
-                      props.data[organizer.imageId + "Org"].childImageSharp.fluid
-                    }
-                  />
-                </a>
-              </div>
-              <b>{organizer.name}</b>
-              <br />
-              {organizer.organization}
+  return (
+    <div className={style.organizerContainer}>
+      {props.organizers.map(organizer => {
+        // Check if the image exists before trying to access it
+        const imageKey = organizer.imageId + "Org";
+        const hasImage = props.data[imageKey] && 
+                         props.data[imageKey].childImageSharp && 
+                         props.data[imageKey].childImageSharp.fluid;
+        
+        return (
+          <div className={style.organizer} key={organizer.imageId}>
+            <div className={style.organizerPic}>
+              <a href={organizer.site} target="_blank">
+                {hasImage ? (
+                  <Img fluid={props.data[imageKey].childImageSharp.fluid} />
+                ) : (
+                  <Img fluid={props.data["defaultOrg"].childImageSharp.fluid} />
+                )}
+              </a>
             </div>
-          );
-        })}
-      </div>
-    );
-  };
+            <b>{organizer.name}</b>
+            <br />
+            {organizer.organization}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 // The speakers of the workshop are all displayed in a similar style,
 // and this component encompasses that style.
@@ -1165,6 +1171,9 @@ export const query = graphql`
     workshopLocation: file(
       relativePath: { eq: "cvpr2024/workshop-location.png" }
     ) {
+      ...FluidImage
+    }
+    defaultOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FluidImage
     }
   }
