@@ -1105,61 +1105,61 @@ export const query = graphql`
     }
 
     # Scientific committee pictures
-    edwardBalabanOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    edwardBalabanOrg: file(relativePath: { eq: "organizers/scientific-commitee/edwardBalaban.jpeg" }) {
       ...FluidImage
     }
-    jenBlankOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    jenniferBlankOrg: file(relativePath: { eq: "organizers/scientific-commitee/jenniferBlank.jpeg" }) {
       ...FluidImage
     }
-    giuseppeCataldoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    giuseppeCataldoOrg: file(relativePath: { eq: "organizers/scientific-commitee/giuseppeCataldo.jpeg" }) {
       ...FluidImage
     }
-    jeanPierreDeLaCroixOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    jeanPierreDeLaCroixOrg: file(relativePath: { eq: "organizers/scientific-commitee/jeanPierreDeLaCroix.jpg" }) {
       ...FluidImage
     }
-    animeshGargOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    animeshGargOrg: file(relativePath: { eq: "organizers/scientific-commitee/animeshGarg.jpg" }) {
+      ...FluidImageƒ
+    }
+    keerthanaGopalakrishnanOrg: file(relativePath: { eq: "organizers/scientific-commitee/keerthanaGopalakrishnan.jpg" }) {
       ...FluidImage
     }
-    keerthanaGopalakrishnanOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    jenniferHeldmannOrg: file(relativePath: { eq: "organizers/scientific-commitee/jenniferHeldmann.jpeg" }) {
       ...FluidImage
     }
-    jenHeldmannOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    pyojinKimOrg: file(relativePath: { eq: "organizers/scientific-commitee/pyojinKim.jpeg" }) {
       ...FluidImage
     }
-    pyojinKimOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    jonathanKnowlesOrg: file(relativePath: { eq: "organizers/scientific-commitee/jonathanKnowles.jpeg" }) {
       ...FluidImage
     }
-    jonathanKnowlesOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    robertoLamparielloOrg: file(relativePath: { eq: "organizers/scientific-commitee/robertoLampariello.jpeg" }) {
       ...FluidImage
     }
-    robertoLamparielloOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    alisonLowndesOrg: file(relativePath: { eq: "organizers/scientific-commitee/alisonLowndes.jpg" }) {
       ...FluidImage
     }
-    alisonLowndesOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    luisMerinoOrg: file(relativePath: { eq: "organizers/scientific-commitee/luisMerino.jpeg" }) {
       ...FluidImage
     }
-    luisMerinoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    hiroOnoOrg: file(relativePath: { eq: "organizers/scientific-commitee/hiroOno.jpg" }) {
       ...FluidImage
     }
-    hiroOnoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    katherineScottOrg: file(relativePath: { eq: "organizers/scientific-commitee/katherineScott.jpg" }) {
       ...FluidImage
     }
-    katherineScottOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    luisSentisOrg: file(relativePath: { eq: "organizers/scientific-commitee/luisSentis.png" }) {
       ...FluidImage
     }
-    luisSentisOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    treySmithOrg: file(relativePath: { eq: "organizers/scientific-commitee/treySmith.jpg" }) {
       ...FluidImage
     }
-    treySmithOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    johnathanStockOrg: file(relativePath: { eq: "organizers/scientific-commitee/johnathanStock.png" }) {
       ...FluidImage
     }
-    johnathanStockOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    kentaroUnoOrg: file(relativePath: { eq: "organizers/scientific-commitee/kentaroUno.png" }) {
       ...FluidImage
     }
-    kentaroUnoOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
-      ...FluidImage
-    }
-    rodrigoVenturaOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    rodrigoVenturaOrg: file(relativePath: { eq: "organizers/scientific-commitee/rodrigoVentura.jpg" }) {
       ...FluidImage
     }
 
