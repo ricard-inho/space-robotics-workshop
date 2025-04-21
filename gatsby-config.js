@@ -5,36 +5,42 @@ const path = require(`path`);
 
 // ------------------------------------------------------------------
 // Metadata for Space Robotics #2 at IEEE SMC-IT/SCC 2025
-spacerobotics2025metadata = {
+const spacerobotics2025metadata = {
   organizers: [
     {
       challenge: false,
       imageId: "ignacioGLopezFrancos",
       name: "Ignacio G. López-Francos",
-      oc: true,
-      lo: true,
+      oc: true, //organizing committee
       organization: "NASA Ames",
-      sab: false,
+      sc: false, //scientific committee
       site: "https://www.linkedin.com/in/ilopezfrancos/",
     },
     {
       challenge: false,
-      imageId: "brianColtin",
-      name: "Brian Coltins",
+      imageId: "roshanKalghatgi",
+      name: "Roshan Kalghatgi",
       oc: true,
-      lo: true,
       organization: "NASA Ames",
-      sab: false,
+      sc: false,
+      site: "https://www.linkedin.com/in/roshankalghatgi/",
+    },
+    {
+      challenge: false,
+      imageId: "brianColtin",
+      name: "Brian Coltin",
+      oc: true,
+      organization: "NASA Ames",
+      sc: false,
       site: "https://brian.coltin.org/",
     },
     {
-      challenge: true,
+      challenge: false,
       imageId: "alexSowell",
       name: "Alex Sowell",
       oc: true,
-      lo: false,
       organization: "NASA JSC",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/samuel-alex-sowell-07695671/",
     },
     {
@@ -42,9 +48,8 @@ spacerobotics2025metadata = {
       imageId: "robRoyce",
       name: "Rob Royce",
       oc: true,
-      lo: false,
       organization: "NASA JPL",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/robroyce/",
     },
     {
@@ -52,9 +57,8 @@ spacerobotics2025metadata = {
       imageId: "marcelKaufmann",
       name: "Marcel Kaufmann",
       oc: true,
-      lo: false,
       organization: "NASA JPL",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/kaufmann-space",
     },
     {
@@ -62,9 +66,8 @@ spacerobotics2025metadata = {
       imageId: "kuldeepRambhai",
       name: "Kuldeep Rambhai",
       oc: true,
-      lo: false,
       organization: "Redwire",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/kuldeepbarad/",
     },
     {
@@ -72,31 +75,28 @@ spacerobotics2025metadata = {
       imageId: "ricardMarsal",
       name: "Ricard Marsal I Castan",
       oc: true,
-      lo: false,
       organization: "University of Luxembourg",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/ricard-marsal-44ba63155/",
     },
     {
-      challenge: true,
+      challenge: false,
       imageId: "maggieWang",
       name: "Maggie Wang",
       oc: true,
-      lo: false,
       organization: "Stanford University",
-      sab: false,
+      sc: false,
       site: "https://www.linkedin.com/in/maggie-wang/",
     },
 
-    // Scientific Committee
+    // Scientific Committee (keep oc: false, sc: true)
     {
       challenge: false,
       imageId: "edwardBalaban",
       name: "Edward Balaban",
       oc: false,
-      lo: false,
       organization: "NASA ARC",
-      sab: true,
+      sc: true,
       site:"",
     },
     {
@@ -104,9 +104,8 @@ spacerobotics2025metadata = {
       imageId: "jenBlank",
       name: "Jen Blank",
       oc: false,
-      lo: false,
       organization: "Blue Marble Space Institute of Science",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -114,9 +113,8 @@ spacerobotics2025metadata = {
       imageId: "giuseppeCataldo",
       name: "Giuseppe Cataldo",
       oc: false,
-      lo: false,
       organization: "NASA GSFC",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -124,9 +122,8 @@ spacerobotics2025metadata = {
       imageId: "jeanPierreDeLaCroix",
       name: "Jean-Pierre de la Croix",
       oc: false,
-      lo: false,
       organization: "NASA JPL",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -134,9 +131,8 @@ spacerobotics2025metadata = {
       imageId: "animeshGarg",
       name: "Animesh Garg",
       oc: false,
-      lo: false,
       organization: "Georgia Tech, NVIDIA, Apptronik",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -144,9 +140,8 @@ spacerobotics2025metadata = {
       imageId: "keerthanaGopalakrishnan",
       name: "Keerthana Gopalakrishnan",
       oc: false,
-      lo: false,
       organization: "Google DeepMind",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -154,9 +149,8 @@ spacerobotics2025metadata = {
       imageId: "jenHeldmann",
       name: "Jen Heldmann",
       oc: false,
-      lo: false,
       organization: "NASA ARC",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -164,9 +158,8 @@ spacerobotics2025metadata = {
       imageId: "pyojinKim",
       name: "Pyojin Kim",
       oc: false,
-      lo: false,
       organization: "Gwangju Institute of Science and Technology (GIST)",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -174,9 +167,8 @@ spacerobotics2025metadata = {
       imageId: "jonathanKnowles",
       name: "Jonathan Knowles",
       oc: false,
-      lo: false,
       organization: "Former Autodesk, Apple, Adobe",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -184,9 +176,8 @@ spacerobotics2025metadata = {
       imageId: "robertoLampariello",
       name: "Roberto Lampariello",
       oc: false,
-      lo: false,
       organization: "DLR (German Aerospace Center)",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -194,9 +185,8 @@ spacerobotics2025metadata = {
       imageId: "alisonLowndes",
       name: "Alison Lowndes",
       oc: false,
-      lo: false,
       organization: "NVIDIA",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -204,9 +194,8 @@ spacerobotics2025metadata = {
       imageId: "luisMerino",
       name: "Luis Merino",
       oc: false,
-      lo: false,
       organization: "Universidad Pablo de Olavide",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -214,9 +203,8 @@ spacerobotics2025metadata = {
       imageId: "hiroOno",
       name: "Hiro Ono",
       oc: false,
-      lo: false,
       organization: "NASA JPL",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -224,9 +212,8 @@ spacerobotics2025metadata = {
       imageId: "katherineScott",
       name: "Katherine Scott",
       oc: false,
-      lo: false,
       organization: "Intrinsic, Open Robotics",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -234,9 +221,8 @@ spacerobotics2025metadata = {
       imageId: "luisSentis",
       name: "Luis Sentis",
       oc: false,
-      lo: false,
       organization: "University of Texas at Austin, Apptronik",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -244,9 +230,8 @@ spacerobotics2025metadata = {
       imageId: "treySmith",
       name: "Trey Smith",
       oc: false,
-      lo: false,
       organization: "NASA ARC",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -254,9 +239,8 @@ spacerobotics2025metadata = {
       imageId: "johnathanStock",
       name: "Johnathan Stock",
       oc: false,
-      lo: false,
       organization: "NASA ARC",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -264,9 +248,8 @@ spacerobotics2025metadata = {
       imageId: "kentaroUno",
       name: "Kentaro Uno",
       oc: false,
-      lo: false,
       organization: "Tohoku University",
-      sab: true,
+      sc: true,
       site: "",
     },
     {
@@ -274,9 +257,8 @@ spacerobotics2025metadata = {
       imageId: "rodrigoVentura",
       name: "Rodrigo Ventura",
       oc: false,
-      lo: false,
       organization: "Instituto Superior Técnico (IST), University of Lisbon",
-      sab: true,
+      sc: true,
       site: "",
     },
   ],
@@ -286,6 +268,7 @@ spacerobotics2025metadata = {
 // Sitewide metadata used to generate pages.
 module.exports = {
   siteMetadata: {
+    // Uncomment this line to make the data available
     spacerobotics2025: spacerobotics2025metadata,
   },
   plugins: [
@@ -293,8 +276,9 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-antd`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    // Keep these commented out for now if they were causing the build error
+    // `gatsby-transformer-sharp`,
+    // `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
