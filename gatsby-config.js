@@ -276,9 +276,8 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-antd`,
     `gatsby-plugin-react-helmet`,
-    // Keep these commented out for now if they were causing the build error
-    // `gatsby-transformer-sharp`,
-    // `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,

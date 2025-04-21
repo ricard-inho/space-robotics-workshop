@@ -1059,7 +1059,6 @@ export const query = graphql`
               site
               sc
               oc
-              lo
               challenge
             }
           }
