@@ -100,8 +100,8 @@ const spacerobotics2025metadata = {
     },
     {
       challenge: false,
-      imageId: "jenBlank",
-      name: "Jen Blank",
+      imageId: "jenniferBlank",
+      name: "Jennifer Blank",
       oc: false,
       organization: "Blue Marble Space Institute of Science",
       sc: true,
@@ -145,8 +145,8 @@ const spacerobotics2025metadata = {
     },
     {
       challenge: false,
-      imageId: "jenHeldmann",
-      name: "Jen Heldmann",
+      imageId: "jenniferHeldmann",
+      name: "Jennifer Heldmann",
       oc: false,
       organization: "NASA ARC",
       sc: true,
