@@ -38,7 +38,7 @@ export const OrganizerPics = function (props: { organizers: any; data: any }) {
   return (
     <div className={style.organizerContainer}>
       {props.organizers.map(organizer => {
-        // Check if the image exists before trying to access it
+        // Add "Org" suffix to match GraphQL query names
         const imageKey = organizer.imageId + "Org";
         const hasImage = props.data[imageKey] && 
                          props.data[imageKey].childImageSharp && 
@@ -1079,7 +1079,7 @@ export const query = graphql`
     
 
     # organizer pictures
-    ignacioGLopezFrancosOrg: file(relativePath: { eq: "organizers/ignacioLF.png" }) {
+    ignacioGLopezFrancosOrg: file(relativePath: { eq: "organizers/ignacioGLopezFrancos.png" }) {
       ...FluidImage
     }
     brianColtinOrg: file(relativePath: { eq: "organizers/brianColtin.jpg" }) {
