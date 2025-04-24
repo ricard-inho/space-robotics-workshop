@@ -1041,70 +1041,85 @@ export default function Home({ data }) {
         </ul>
 
         <SubSection title="Submission Guidelines">
-  <ul>
-    <li>
-      Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: 
-      <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
-    </li>
-    <li>
-      Submissions must be made through the 
-      <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. 
-      Please select the <strong>"Space Robotics Workshop"</strong> track.
-    </li>
-    <li>
-      Authors may choose between two options during the submission:
-      <ul>
-        <li>
-          <strong>Track A – Archival:</strong> For authors who wish to publish their paper in the IEEE conference proceedings (indexed in IEEE Xplore).
-        </li>
-        <li>
-          <strong>Track B – Non-Archival:</strong> For authors who prefer to present at the workshop without publishing in the proceedings, allowing future submission to journals or other venues.
-        </li>
-      </ul>
-    </li>
-    <li>
-      <strong>Important Dates by Track:</strong>
-      <table style={{ borderCollapse: "collapse", width: "100%" }}>
-        <thead>
-          <tr>
-            <th style={{ borderBottom: "1px solid #ccc" }}>Milestone</th>
-            <th style={{ borderBottom: "1px solid #ccc" }}>Track A – Archival (IEEE)</th>
-            <th style={{ borderBottom: "1px solid #ccc" }}>Track B – Non-Archival</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Submission deadline</td>
-            <td><strong>May 23</strong></td>
-            <td><strong>June 6</strong></td>
-          </tr>
-          <tr>
-            <td>Notification</td>
-            <td>June 6</td>
-            <td>June 20</td>
-          </tr>
-          <tr>
-            <td>Camera-ready deadline</td>
-            <td>June 20</td>
-            <td>July 7</td>
-          </tr>
-        </tbody>
-      </table>
-    </li>
-    <li>
-      All submissions will be <strong>peer reviewed</strong> for quality and relevance.
-    </li>
-    <li>
-      At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
-    </li>
-    <li>
-      All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
-    </li>
-    <li>
-      Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More information will be shared at a later date.
-    </li>
+          <ul>
+            <li>
+              Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: 
+              <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
+            </li>
+            <li>
+              Submissions must be made through the 
+              <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. 
+              Please select the <strong>"Space Robotics Workshop"</strong> track.
+            </li>
+            <li>
+              Authors may choose between two submission options:
+              <ul>
+                <li>
+                  <strong>Track A – Archival (IEEE Proceedings):</strong> Papers will be included in the official IEEE conference proceedings (indexed in IEEE Xplore).
+                </li>
+                <li>
+                  <strong>Track B – Non-Archival:</strong> For authors who wish to present without publication, preserving eligibility for future archival venues.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Papers selected for IEEE publication must be presented <strong>in person</strong> to comply with IEEE's "Podium and Publish" policy.
+            </li>
+            <li>
+              Authors who opt out of IEEE publication may still present at the workshop and are encouraged to contribute to discussions and community-building.
+            </li>
+            <li>
+              All submissions will be <strong>peer reviewed</strong> for quality and relevance.
+            </li>
+            <li>
+              At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
+            </li>
+            <li>
+              All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
+            </li>
+            <li>
+              Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More details will be shared later.
+            </li>
           </ul>
         </SubSection>
+
+        <SubSection title="Important Dates">
+          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "15px", marginBottom: "20px" }}>
+            <thead>
+              <tr>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Milestone</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Track A – Archival (IEEE)</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Track B – Non-Archival</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Paper Submission deadline</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>May 23</strong></td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 6</strong></td>
+              </tr>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Acceptance Notification</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 6</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Camera-ready deadline</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>July 7</td>
+              </tr>
+            </tbody>
+          </table>
+        </SubSection>
+
+        <div style={{ marginTop: "30px", marginBottom: "20px" }}>
+          <hr style={{ border: "1px solid #eee" }} />
+          <p style={{ marginTop: "20px" }}>
+            For any questions, please feel free to reach out to:<br />
+            📩 <a href="mailto:ignacio.lopez-francos@nasa.gov">ignacio.lopez-francos@nasa.gov</a><br />
+            📩 <a href="mailto:marcel.kaufmann@jpl.nasa.gov">marcel.kaufmann@jpl.nasa.gov</a>
+          </p>
+        </div>
       </Section>
       <Section title="Sponsors">
         <p>
