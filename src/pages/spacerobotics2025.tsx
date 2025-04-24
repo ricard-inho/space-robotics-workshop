@@ -739,6 +739,14 @@ function Slack() {
   );
 }
 
+// First, let's add a function to determine upcoming deadlines
+// Add this near the top of your SpaceRobotics2025Page component
+const isUpcomingDeadline = (deadlineDate) => {
+  const today = new Date();
+  const deadline = new Date(deadlineDate);
+  return deadline > today;
+};
+
 // And finally, we add all the content into their respective sections.
 export default function Home({ data }) {
   const [windowWidth, setWindowWidth] = React.useState(getWindowWidth());
@@ -829,21 +837,71 @@ export default function Home({ data }) {
         <p>
           The program will be organized around a set of focused technical sessions, with keynote talks, spotlight presentations, panels, and a poster session.
         </p>
+        <Alert
+          type="warning" // This makes the background yellow
+            message={
+              <>
+                💡 Also of interest for the community: The{" "}
+                <a
+                  href="https://albee.github.io/space-robotics-rss/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  RSS'25 Space Robotics Workshop
+                </a>{" "}
+                (June 21, Los Angeles) is accepting submissions through May 2.
+                We encourage the community to explore both workshops.
+              </>
+            }
+            style={{ marginTop: "20px", marginBottom: "20px" }} // Add some spacing
+          />
+
       </Section>
       <Section title="Timeline">
-        <Steps progressDot current={1} direction="vertical">
+      <Steps progressDot current={1} direction="vertical">
           <Step title="Workshop Announced" description="April 1st, 2025" />
-          <Step title="Paper Submission Deadline" description="May 2nd, 2025" />
           <Step
-            title="Paper Acceptance Deadline"
+            title={
+              <span style={{ 
+                fontWeight: isUpcomingDeadline("2025-05-23") ? "bold" : "normal",
+                color: isUpcomingDeadline("2025-05-23") ? "#1890ff" : "inherit"
+              }}>
+                Paper Submission Deadline - Track A (Archival)
+              </span>
+            }
             description="May 23rd, 2025"
           />
           <Step
-            title="Final Camera-Ready Paper Deadline"
+            title={
+              <span style={{ 
+                fontWeight: isUpcomingDeadline("2025-05-23") ? "normal" : 
+                   isUpcomingDeadline("2025-06-06") ? "bold" : "normal",
+                color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
+               isUpcomingDeadline("2025-06-06") ? "#1890ff" : "inherit"
+              }}>
+                Paper Submission Deadline - Track B (Non-Archival)
+              </span>
+            }
+            description="June 6th, 2025"
+          />
+          <Step
+            title="Paper Notification - Track A"
+            description="June 6th, 2025"
+          />
+          <Step
+            title="Paper Notification - Track B"
             description="June 20th, 2025"
           />
           <Step
-            title="Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC "
+            title="Final Camera-Ready Deadline - Track A"
+            description="June 20th, 2025"
+          />
+          <Step
+            title="Final Camera-Ready Deadline - Track B"
+            description="July 7th, 2025"
+          />
+          <Step
+            title="Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC"
             description={
               <>
                 <a
@@ -851,6 +909,7 @@ export default function Home({ data }) {
                     "https://2025.smcit-scc.space/home/space-robotics-2025#Call-for-Papers-to-the-2nd-Space-Robotics-Workshop"
                   }
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Los Angeles, California
                 </a>{" "}
@@ -945,35 +1004,69 @@ export default function Home({ data }) {
           </li>
         </ul>
 
-        <hr />
-
         <SubSection title="Submission Guidelines">
-          <ul>
-            <li>
-              Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
-            </li>
-            <li>
-              Submissions must be made through the <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. Please select the <strong>"Space Robotics Workshop"</strong> track.
-            </li>
-            <li>
-              Authors may choose whether or not to include their paper in the <strong>IEEE conference proceedings</strong> (indexed in IEEE Xplore).
-              <ul>
-                <li>Papers selected for IEEE publication must be presented <strong>in person</strong> to comply with IEEE's "Podium and Publish" policy.</li>
-                <li>Authors who opt out of IEEE publication may still present at the workshop, preserving eligibility for future submission to archival journals or conferences. They may also be offered a slightly later submission deadline (after <strong>May 2, 2025</strong>), depending on review capacity.</li>
-              </ul>
-            </li>
-            <li>
-              All submissions will be <strong>peer reviewed</strong> for quality and relevance.
-            </li>
-            <li>
-              At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
-            </li>
-            <li>
-              All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
-            </li>
-            <li>
-              Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More information will be shared at a later date.
-            </li>
+  <ul>
+    <li>
+      Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: 
+      <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
+    </li>
+    <li>
+      Submissions must be made through the 
+      <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. 
+      Please select the <strong>"Space Robotics Workshop"</strong> track.
+    </li>
+    <li>
+      Authors may choose between two options during the submission:
+      <ul>
+        <li>
+          <strong>Track A – Archival:</strong> For authors who wish to publish their paper in the IEEE conference proceedings (indexed in IEEE Xplore).
+        </li>
+        <li>
+          <strong>Track B – Non-Archival:</strong> For authors who prefer to present at the workshop without publishing in the proceedings, allowing future submission to journals or other venues.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Important Dates by Track:</strong>
+      <table style={{ borderCollapse: "collapse", width: "100%" }}>
+        <thead>
+          <tr>
+            <th style={{ borderBottom: "1px solid #ccc" }}>Milestone</th>
+            <th style={{ borderBottom: "1px solid #ccc" }}>Track A – Archival (IEEE)</th>
+            <th style={{ borderBottom: "1px solid #ccc" }}>Track B – Non-Archival</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Submission deadline</td>
+            <td><strong>May 23, 2025</strong></td>
+            <td><strong>June 6, 2025</strong></td>
+          </tr>
+          <tr>
+            <td>Notification</td>
+            <td>June 6, 2025</td>
+            <td>June 20, 2025</td>
+          </tr>
+          <tr>
+            <td>Camera-ready deadline</td>
+            <td>June 20, 2025 <em>(This is immovable)</em></td>
+            <td>July 7, 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li>
+      All submissions will be <strong>peer reviewed</strong> for quality and relevance.
+    </li>
+    <li>
+      At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
+    </li>
+    <li>
+      All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
+    </li>
+    <li>
+      Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More information will be shared at a later date.
+    </li>
           </ul>
         </SubSection>
       </Section>
@@ -1085,10 +1178,10 @@ export const query = graphql`
     brianColtinOrg: file(relativePath: { eq: "organizers/brianColtin.jpg" }) {
       ...FluidImage
     }
-    alexSowellOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    alexSowellOrg: file(relativePath: { eq: "organizers/alexSowell.jpg" }) {
       ...FluidImage
     }
-    robRoyceOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    robRoyceOrg: file(relativePath: { eq: "organizers/robRoyce.jpeg" }) {
       ...FluidImage
     }
     marcelKaufmannOrg: file(relativePath: { eq: "organizers/marcelKaufmann.jpeg" }) {
@@ -1100,7 +1193,7 @@ export const query = graphql`
     ricardMarsalOrg: file(relativePath: { eq: "organizers/ricardMarsal.jpeg" }) {
       ...FluidImage
     }
-    maggieWangOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+    maggieWangOrg: file(relativePath: { eq: "organizers/maggieWang.jpg" }) {
       ...FluidImage
     }
 
