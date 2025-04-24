@@ -826,7 +826,7 @@ export default function Home({ data }) {
     >
       <Section title="Overview">
         <p>
-          The <strong>2nd Space Robotics Workshop (SRW)</strong> will be held in conjunction with the <strong>IEEE SMC-IT/SCC</strong> from <strong>July 28th to 29th 2025</strong>, at the California Science Center in <strong>Los Angeles, CA</strong>. The workshop will bring together experts in robotics, autonomy, AI, and aerospace to shape the next era of innovation driving our return to the Moon, the sustainable exploration of Mars and beyond, and the expansion of commercial activity beyond Earth orbit.
+          The <strong>2nd Space Robotics Workshop (SRW)</strong> will be held in conjunction with the <strong><a href="https://2025.smcit-scc.space/" target="_blank" rel="noopener noreferrer">IEEE SMC-IT/SCC</a></strong> from <strong>July 28-29, 2025</strong>, at the <strong><a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a></strong> in <strong>Los Angeles, CA</strong>. The workshop will bring together experts in robotics, autonomy, AI, and aerospace to shape the next era of innovation driving our return to the Moon, the sustainable exploration of Mars and beyond, and the expansion of commercial activity beyond Earth orbit.
         </p>
         <p>
           As national space agencies and commercial ventures capitalize on next-generation robotics, we stand at a critical juncture. Increasing mission complexity, evolving space architectures, expanding commercial services, and the rapid progress in AI present both unprecedented opportunities and new challenges in how we explore, operate, and build a sustainable space economy. Rapid advances in terrestrial robotics are directly influencing the development of space robotics and are poised to play a central role in enabling more autonomous, resilient, and ambitious missions, while also laying the groundwork for future off-world economic activities.
@@ -905,16 +905,16 @@ export default function Home({ data }) {
             description={
               <>
                 <a
-                  href={
-                    "https://2025.smcit-scc.space/home/space-robotics-2025#Call-for-Papers-to-the-2nd-Space-Robotics-Workshop"
-                  }
+                  href="https://californiasciencecenter.org/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Los Angeles, California
+                  California Science Center
                 </a>{" "}
                 <br />
-                July 28, 2025
+                Los Angeles, California
+                <br />
+                July 28-29, 2025
                 <br />
                 <span
                   css={css`
@@ -927,19 +927,55 @@ export default function Home({ data }) {
         </Steps>
       </Section>
 
-      <Section title="Workshop Schedule">
-        <ul>
-          <li>
-            <b>Workshop Talks: 10:30AM-5:15PM PT - TBD</b>
-          </li>
-        </ul>
+      <Section title="Tentative Agenda">
+        <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
+          <thead>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <th style={{ padding: "8px", textAlign: "left" }}>Time</th>
+              <th style={{ padding: "8px", textAlign: "left" }}>Day 1</th>
+              <th style={{ padding: "8px", textAlign: "left" }}>Day 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>10:30 AM – 12:00 PM</td>
+              <td style={{ padding: "8px" }}>Session 1</td>
+              <td style={{ padding: "8px" }}>Session 4</td>
+            </tr>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>12:00 PM – 1:00 PM</td>
+              <td style={{ padding: "8px" }}>Lunch Break</td>
+              <td style={{ padding: "8px" }}>Lunch Break</td>
+            </tr>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>1:00 PM – 2:30 PM</td>
+              <td style={{ padding: "8px" }}>Spotlight Talks</td>
+              <td style={{ padding: "8px" }}>Spotlight Talks</td>
+            </tr>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>2:30 PM – 3:00 PM</td>
+              <td style={{ padding: "8px" }}>Session 2</td>
+              <td style={{ padding: "8px" }}>Session 5</td>
+            </tr>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>3:00 PM – 3:30 PM</td>
+              <td style={{ padding: "8px" }}>Coffee Break</td>
+              <td style={{ padding: "8px" }}>Coffee Break</td>
+            </tr>
+            <tr style={{ borderBottom: "1px solid #ddd" }}>
+              <td style={{ padding: "8px" }}>3:30 PM – 5:00 PM</td>
+              <td style={{ padding: "8px" }}>Session 3</td>
+              <td style={{ padding: "8px" }}>Session 6</td>
+            </tr>
+          </tbody>
+        </table>
       </Section>
 
       <Section title="Call for Papers">
         <Alert
           message={
             <>
-              <strong>Paper submissions are now open through May 2nd, 2025!</strong>{" "}
+              <strong>Paper submissions (for Track A) are now open through May 23rd!</strong>{" "}
               <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
                 Submit here <LaunchIcon fontSize="inherit" />
               </a>
@@ -1039,18 +1075,18 @@ export default function Home({ data }) {
         <tbody>
           <tr>
             <td>Submission deadline</td>
-            <td><strong>May 23, 2025</strong></td>
-            <td><strong>June 6, 2025</strong></td>
+            <td><strong>May 23</strong></td>
+            <td><strong>June 6</strong></td>
           </tr>
           <tr>
             <td>Notification</td>
-            <td>June 6, 2025</td>
-            <td>June 20, 2025</td>
+            <td>June 6</td>
+            <td>June 20</td>
           </tr>
           <tr>
             <td>Camera-ready deadline</td>
-            <td>June 20, 2025 <em>(This is immovable)</em></td>
-            <td>July 7, 2025</td>
+            <td>June 20</td>
+            <td>July 7</td>
           </tr>
         </tbody>
       </table>
