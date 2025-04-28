@@ -975,7 +975,7 @@ export default function Home({ data }) {
         <Alert
           message={
             <>
-              <strong>Paper submissions (for Track A) are now open through May 23rd!</strong>{" "}
+              <strong>Paper submissions are now open!! </strong>{" "}
               <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
                 Submit here <LaunchIcon fontSize="inherit" />
               </a>
