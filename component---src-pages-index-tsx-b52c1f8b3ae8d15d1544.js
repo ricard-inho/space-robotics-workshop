@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkspacer_robotics_workshop=self.webpackChunkspacer_robotics_workshop||[]).push([[245],{2783:function(o,s,c){c.r(s);var e=c(6540),r=c(4810),t=c(1013);s.default=()=>{const o="2025",s="/spacerobotics2025/";return e.useEffect((()=>{(0,r.oo)(s)}),[s]),(0,t.Y)("p",null,"Redirecting to Space Robotics ",o," ...")}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-b52c1f8b3ae8d15d1544.js.map
