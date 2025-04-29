@@ -866,7 +866,7 @@ export default function Home({ data }) {
                 fontWeight: isUpcomingDeadline("2025-05-23") ? "bold" : "normal",
                 color: isUpcomingDeadline("2025-05-23") ? "#1890ff" : "inherit"
               }}>
-                Paper Submission Deadline - Track A (Archival)
+                Paper Submission Deadline - Archival Track
               </span>
             }
             description="May 23rd, 2025"
@@ -879,25 +879,25 @@ export default function Home({ data }) {
                 color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
                isUpcomingDeadline("2025-06-06") ? "#1890ff" : "inherit"
               }}>
-                Paper Submission Deadline - Track B (Non-Archival)
+                Paper Submission Deadline - Non-Archival Track
               </span>
             }
             description="June 6th, 2025"
           />
           <Step
-            title="Paper Notification - Track A"
+            title="Paper Notification - Archival Track"
             description="June 6th, 2025"
           />
           <Step
-            title="Paper Notification - Track B"
+            title="Paper Notification - Non-Archival Track"
             description="June 20th, 2025"
           />
           <Step
-            title="Final Camera-Ready Deadline - Track A"
+            title="Final Camera-Ready Deadline - Archival Track"
             description="June 20th, 2025"
           />
           <Step
-            title="Final Camera-Ready Deadline - Track B"
+            title="Final Camera-Ready Deadline - Non-Archival Track"
             description="July 7th, 2025"
           />
           <Step
@@ -975,7 +975,7 @@ export default function Home({ data }) {
         <Alert
           message={
             <>
-              <strong>Paper submissions (for Track A) are now open through May 23rd!</strong>{" "}
+              <strong>Paper submissions are now open!! </strong>{" "}
               <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
                 Submit here <LaunchIcon fontSize="inherit" />
               </a>
@@ -1055,10 +1055,10 @@ export default function Home({ data }) {
               Authors may choose between two submission options:
               <ul>
                 <li>
-                  <strong>Track A – Archival (IEEE Proceedings):</strong> Papers will be included in the official IEEE conference proceedings (indexed in IEEE Xplore).
+                  <strong>Archival Track (IEEE Proceedings):</strong> Papers will be included in the official IEEE conference proceedings (indexed in IEEE Xplore).
                 </li>
                 <li>
-                  <strong>Track B – Non-Archival:</strong> For authors who wish to present without publication, preserving eligibility for future archival venues.
+                  <strong>Non-Archival Track:</strong> For authors who wish to present without publication, preserving eligibility for future archival venues.
                 </li>
               </ul>
             </li>
@@ -1088,8 +1088,8 @@ export default function Home({ data }) {
             <thead>
               <tr>
                 <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Milestone</th>
-                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Track A – Archival (IEEE)</th>
-                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Track B – Non-Archival</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Archival Track (IEEE)</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Non-Archival Track</th>
               </tr>
             </thead>
             <tbody>
