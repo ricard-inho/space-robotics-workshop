@@ -948,12 +948,12 @@ export default function Home({ data }) {
               <td style={{ padding: "8px" }}>Lunch Break</td>
             </tr>
             <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>1:00 PM – 2:30 PM</td>
+              <td style={{ padding: "8px" }}>1:00 PM – 1:30 PM</td>
               <td style={{ padding: "8px" }}>Spotlight Talks</td>
               <td style={{ padding: "8px" }}>Spotlight Talks</td>
             </tr>
             <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>2:30 PM – 3:00 PM</td>
+              <td style={{ padding: "8px" }}>1:30 PM – 3:00 PM</td>
               <td style={{ padding: "8px" }}>Session 2</td>
               <td style={{ padding: "8px" }}>Session 5</td>
             </tr>
