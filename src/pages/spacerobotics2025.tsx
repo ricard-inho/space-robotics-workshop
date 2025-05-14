@@ -763,13 +763,13 @@ export default function Home({ data }) {
     {
       challenge: challengePageMap["CHALLENGE_TODO"],
       key: "CHALLENGE_TODO",
-      task: "Manipulation Via Imitation Learning",
-      interactiveActions: "✓",
-      simulationPlatform: "Isaac Sim",
-      sceneDataset: "Project Aria",
-      observations: "RGB-D, Proprioception",
-      actionSpace: "Continuous",
-      stochasticAcuation: "✓",
+      task: "",
+      interactiveActions: "",
+      simulationPlatform: "",
+      sceneDataset: "",
+      observations: "",
+      actionSpace: "",
+      stochasticAcuation: "",
       winner: "",
     },
   ];
@@ -927,48 +927,142 @@ export default function Home({ data }) {
         </Steps>
       </Section>
 
-      <Section title="Tentative Agenda">
-        <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <th style={{ padding: "8px", textAlign: "left" }}>Time</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Day 1</th>
-              <th style={{ padding: "8px", textAlign: "left" }}>Day 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>10:30 AM – 12:00 PM</td>
-              <td style={{ padding: "8px" }}>Session 1</td>
-              <td style={{ padding: "8px" }}>Session 4</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>12:00 PM – 1:00 PM</td>
-              <td style={{ padding: "8px" }}>Lunch Break</td>
-              <td style={{ padding: "8px" }}>Lunch Break</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>1:00 PM – 1:30 PM</td>
-              <td style={{ padding: "8px" }}>Spotlight Talks</td>
-              <td style={{ padding: "8px" }}>Spotlight Talks</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>1:30 PM – 3:00 PM</td>
-              <td style={{ padding: "8px" }}>Session 2</td>
-              <td style={{ padding: "8px" }}>Session 5</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>3:00 PM – 3:30 PM</td>
-              <td style={{ padding: "8px" }}>Coffee Break</td>
-              <td style={{ padding: "8px" }}>Coffee Break</td>
-            </tr>
-            <tr style={{ borderBottom: "1px solid #ddd" }}>
-              <td style={{ padding: "8px" }}>3:30 PM – 5:00 PM</td>
-              <td style={{ padding: "8px" }}>Session 3</td>
-              <td style={{ padding: "8px" }}>Session 6</td>
-            </tr>
-          </tbody>
-        </table>
+      <Section title="Workshop Schedule">
+        <h2>Day 1 - July 28</h2>
+        <Timeline>
+          <Timeline.Item>
+            <b>S01 - The Moon as a Testbed</b>
+            <br/>
+            <Time time="10:30 AM - 12:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={[""]}
+              name="John Stock"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Lunch break</b>
+            <br/>
+            <Time time="12:00 - 13:00 PM" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Spotlight talks</b>
+            <br/>
+            <Time time="13:00 - 13:30 PM" />
+            <br />
+            Location: TBD
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S02 - Robotics and Autonomy for Mars</b>
+            <br/>
+            <Time time="13:30 AM - 15:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={["University of Texas at Austin, Apptronik"]}
+              name="Luis Sentis"
+              fixedImg={data.luisSentis.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Speaker
+              organizations={["NASA KSC"]}
+              name="Rob Mueller"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Coffee break</b>
+            <br/>
+            <Time time="15:00 - 15:30 PM" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S03 - One-Shot Interplanetary Exploration</b>
+            <br/>
+            <Time time="15:30 AM - 17:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={["NASA JPL"]}
+              name="Hiro Ono"
+              fixedImg={data.hiroOno.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+        </Timeline>
+
+        <h2>Day 2 - July 29</h2>
+        <Timeline>
+          <Timeline.Item>
+            <b>S04 - New Space Economy</b>
+            <br/>
+            <Time time="10:30 AM - 12:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={[""]}
+              name="TBD"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Lunch break</b>
+            <br/>
+            <Time time="12:00 - 13:00 PM" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Spotlight talks</b>
+            <br/>
+            <Time time="13:00 - 13:30 PM" />
+            <br />
+            Location: TBD
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S05 - Embodied AI</b>
+            <br/>
+            <Time time="13:30 AM - 15:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={["Georgia Tech, NVIDIA, Apptronik"]}
+              name="Animesh Garg"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Coffee break</b>
+            <br/>
+            <Time time="15:00 - 15:30 PM" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S06 - Software Simulation</b>
+            <br/>
+            <Time time="15:30 AM - 17:00 PM" />
+            <br />
+            Location: TBD
+            <Speaker
+              organizations={[""]}
+              name="Lutz Richter"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+        </Timeline>
       </Section>
 
       <Section title="Call for Papers">
@@ -1217,7 +1311,13 @@ export const query = graphql`
     }
 
     # speaker pictures
-    jitendra: file(relativePath: { eq: "cvpr2022/jitendra.jpg" }) {
+    default: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
+      ...FaceThumbnail
+    }
+    luisSentis: file(relativePath: { eq: "scientific-committee/luisSentis.png" }) {
+      ...FaceThumbnail
+    }
+    hiroOno: file(relativePath: { eq: "scientific-committee/hiroOno.jpg" }) {
       ...FaceThumbnail
     }
     
