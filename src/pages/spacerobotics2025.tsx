@@ -1300,8 +1300,8 @@ export const query = graphql`
     jeanPierreDeLaCroixOrg: file(relativePath: { eq: "scientific-committee/jeanPierreDeLaCroix.jpg" }) {
       ...FluidImage
     }
-    animeshGargOrg: file(relativePath: { eq: "scientific-committee/animeshGarg.jpg" }) {
-      ...FluidImage
+    animeshGarg: file(relativePath: { eq: "scientific-committee/animeshGarg.jpg" }) {
+      ...FaceThumbnail
     }
     keerthanaGopalakrishnanOrg: file(relativePath: { eq: "scientific-committee/keerthanaGopalakrishnan.jpg" }) {
       ...FluidImage
@@ -1357,6 +1357,9 @@ export const query = graphql`
     }
     defaultOrg: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FluidImage
+    }
+    lutzRichter: file(relativePath: { eq: "speakers/lutzRichter.png" }) {
+      ...FaceThumbnail
     }
   }
 `;
