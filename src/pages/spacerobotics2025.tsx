@@ -855,8 +855,78 @@ export default function Home({ data }) {
             }
             style={{ marginTop: "20px", marginBottom: "20px" }} // Add some spacing
           /> */}
-
       </Section>
+
+      <Section title="Timeline">
+        <Steps progressDot current={1} direction="vertical">
+          <Step title="Workshop Announced" description="April 1st, 2025" />
+          <Step
+            title={
+              <span style={{ 
+                fontWeight: isUpcomingDeadline("2025-05-23") ? "bold" : "normal",
+                color: isUpcomingDeadline("2025-05-23") ? "#1890ff" : "inherit"
+              }}>
+                Paper Submission Deadline - Archival Track
+              </span>
+            }
+            description="May 23rd, 2025"
+          />
+          <Step
+            title={
+              <span style={{ 
+                fontWeight: isUpcomingDeadline("2025-05-23") ? "normal" : 
+                   isUpcomingDeadline("2025-06-06") ? "bold" : "normal",
+                color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
+               isUpcomingDeadline("2025-06-06") ? "#1890ff" : "inherit"
+              }}>
+                Paper Submission Deadline - Non-Archival Track
+              </span>
+            }
+            description="June 6th, 2025"
+          />
+          <Step
+            title="Paper Notification - Archival Track"
+            description="June 6th, 2025"
+          />
+          <Step
+            title="Paper Notification - Non-Archival Track"
+            description="June 20th, 2025"
+          />
+          <Step
+            title="Final Camera-Ready Deadline - Archival Track"
+            description="June 20th, 2025"
+          />
+          <Step
+            title="Final Camera-Ready Deadline - Non-Archival Track"
+            description="July 7th, 2025"
+          />
+          <Step
+            title="Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC"
+            description={
+              <>
+                <a
+                  href="https://californiasciencecenter.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  California Science Center
+                </a>{" "}
+                <br />
+                Los Angeles, California
+                <br />
+                July 28-29, 2025
+                <br />
+                <span
+                  css={css`
+                    color: ${color.gray7};
+                  `}
+                ></span>
+              </>
+            }
+          ></Step>
+        </Steps>
+      </Section>
+
       <Section title="Call for Papers">
         <Alert
           message={
