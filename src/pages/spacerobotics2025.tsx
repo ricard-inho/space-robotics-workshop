@@ -837,7 +837,7 @@ export default function Home({ data }) {
         <p>
           The program will be organized around a set of focused technical sessions, with keynote talks, spotlight presentations, panels, and a poster session.
         </p>
-        <Alert
+        {/* <Alert
           type="warning" // This makes the background yellow
             message={
               <>
@@ -854,229 +854,21 @@ export default function Home({ data }) {
               </>
             }
             style={{ marginTop: "20px", marginBottom: "20px" }} // Add some spacing
-          />
+          /> */}
 
       </Section>
-      <Section title="Timeline">
-      <Steps progressDot current={1} direction="vertical">
-          <Step title="Workshop Announced" description="April 1st, 2025" />
-          <Step
-            title={
-              <span style={{ 
-                fontWeight: isUpcomingDeadline("2025-05-23") ? "bold" : "normal",
-                color: isUpcomingDeadline("2025-05-23") ? "#1890ff" : "inherit"
-              }}>
-                Paper Submission Deadline - Archival Track
-              </span>
-            }
-            description="May 23rd, 2025"
-          />
-          <Step
-            title={
-              <span style={{ 
-                fontWeight: isUpcomingDeadline("2025-05-23") ? "normal" : 
-                   isUpcomingDeadline("2025-06-06") ? "bold" : "normal",
-                color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
-               isUpcomingDeadline("2025-06-06") ? "#1890ff" : "inherit"
-              }}>
-                Paper Submission Deadline - Non-Archival Track
-              </span>
-            }
-            description="June 6th, 2025"
-          />
-          <Step
-            title="Paper Notification - Archival Track"
-            description="June 6th, 2025"
-          />
-          <Step
-            title="Paper Notification - Non-Archival Track"
-            description="June 20th, 2025"
-          />
-          <Step
-            title="Final Camera-Ready Deadline - Archival Track"
-            description="June 20th, 2025"
-          />
-          <Step
-            title="Final Camera-Ready Deadline - Non-Archival Track"
-            description="July 7th, 2025"
-          />
-          <Step
-            title="Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC"
-            description={
-              <>
-                <a
-                  href="https://californiasciencecenter.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  California Science Center
-                </a>{" "}
-                <br />
-                Los Angeles, California
-                <br />
-                July 28-29, 2025
-                <br />
-                <span
-                  css={css`
-                    color: ${color.gray7};
-                  `}
-                ></span>
-              </>
-            }
-          ></Step>
-        </Steps>
-      </Section>
-
-      <Section title="Workshop Schedule">
-        <h2>Day 1 - July 28</h2>
-        <Timeline>
-          <Timeline.Item>
-            <b>S01 - The Moon as a Testbed</b>
-            <br/>
-            <Time time="10:30 AM - 12:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={[""]}
-              name="John Stock"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Lunch break</b>
-            <br/>
-            <Time time="12:00 - 13:00 PM" />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Spotlight talks</b>
-            <br/>
-            <Time time="13:00 - 13:30 PM" />
-            <br />
-            Location: TBD
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>S02 - Robotics and Autonomy for Mars</b>
-            <br/>
-            <Time time="13:30 AM - 15:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={["University of Texas at Austin, Apptronik"]}
-              name="Luis Sentis"
-              fixedImg={data.luisSentis.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["NASA KSC"]}
-              name="Rob Mueller"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Coffee break</b>
-            <br/>
-            <Time time="15:00 - 15:30 PM" />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>S03 - One-Shot Interplanetary Exploration</b>
-            <br/>
-            <Time time="15:30 AM - 17:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={["NASA JPL"]}
-              name="Hiro Ono"
-              fixedImg={data.hiroOno.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-        </Timeline>
-
-        <h2>Day 2 - July 29</h2>
-        <Timeline>
-          <Timeline.Item>
-            <b>S04 - New Space Economy</b>
-            <br/>
-            <Time time="10:30 AM - 12:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={[""]}
-              name="TBD"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Lunch break</b>
-            <br/>
-            <Time time="12:00 - 13:00 PM" />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Spotlight talks</b>
-            <br/>
-            <Time time="13:00 - 13:30 PM" />
-            <br />
-            Location: TBD
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>S05 - Embodied AI</b>
-            <br/>
-            <Time time="13:30 AM - 15:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={["Georgia Tech, NVIDIA, Apptronik"]}
-              name="Animesh Garg"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>Coffee break</b>
-            <br/>
-            <Time time="15:00 - 15:30 PM" />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>S06 - Software Simulation</b>
-            <br/>
-            <Time time="15:30 AM - 17:00 PM" />
-            <br />
-            Location: TBD
-            <Speaker
-              organizations={[""]}
-              name="Lutz Richter"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
-          </Timeline.Item>
-        </Timeline>
-      </Section>
-
       <Section title="Call for Papers">
         <Alert
           message={
             <>
-              <strong>Paper submissions are now open!! </strong>{" "}
+              <strong>Hurry! There is still time to submit! </strong>{" "}
               <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
-                Submit here <LaunchIcon fontSize="inherit" />
+                Submit here (EasyChair portal) <LaunchIcon fontSize="inherit" />
               </a>
             </>
           }
           type="info"
-          showIcon
+          showIcon={false}
           style={{ marginBottom: '1em' }}
         />
         <p>
@@ -1215,6 +1007,153 @@ export default function Home({ data }) {
           </p>
         </div>
       </Section>
+      <Section title="Workshop Schedule">
+        <h2>Day 1 - July 28</h2>
+        <Timeline>
+          <Timeline.Item>
+            <b>S01 - The Moon as a Testbed for the New Space Economy</b>
+            <br/>
+            <Time time="10:30 AM - 12:00 PM PT" />
+            <br />
+            Room TBD
+            {/* <Speaker
+              organizations={[""]}
+              name="John Stock"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            /> */}
+            <Speaker
+              organizations={["NASA KSC"]}
+              name="Rob Mueller"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Abstract
+              text="Commercial companies are starting to step on the Moon, while space agencies prepare for humanity's return and a sustained lunar presence that will use the Moon as a proving ground for Mars. The success of these missions will lay the foundation for a lunar economy. This session will examine how commercial innovation is shaping this new space economy, exploring activities such as transportation, in-situ resource utilization (ISRU), and infrastructure construction, as well as the essential roles robotics and autonomy will play in enabling a scalable and sustainable lunar economy."
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Lunch break</b>
+            <br/>
+            <Time time="12:00 - 1:00 PM PT" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Spotlight talks</b>
+            <br/>
+            <Time time="1:00 - 1:30 PM PT" />
+            {/* Location: TBD */}
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S02 - Robotics and Autonomy for Mars</b>
+            <br/>
+            <Time time="1:30 - 3:00 PM PT" />
+            {/* Location: TBD */}
+            <Speaker
+              organizations={["University of Texas at Austin, Apptronik"]}
+              name="Luis Sentis"
+              fixedImg={data.luisSentis.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Abstract
+              text="As we extend robotic exploration to Mars and prepare for missions to more distant worlds, increasing levels of autonomy will be essential. Far from Earth and constrained by communication delays, robotic systems must be capable of perceiving their environment, making decisions, and acting independently to accomplish science and mission objectives. This session will explore the key robotics and autonomy technologies that NASA and its partners must develop or mature to support the Moon-to-Mars architecture. It will also examine how recent advances in AI can help accelerate progress toward resilient, adaptable, intelligent systems in support of this vision."
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Coffee break</b>
+            <br/>
+            <Time time="3:00 - 3:30 PM PT" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S03 - One-Shot Interplanetary Exploration With Software-Defined Robotic Systems</b>
+            <br/>
+            <Time time="3:30 - 5:00 PM PT" />
+            {/* Location: TBD */}
+            <Speaker
+              organizations={["NASA JPL"]}
+              name="Hiro Ono"
+              fixedImg={data.hiroOno.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Abstract
+              text="As we look beyond Mars toward the outer Solar System, the traditional model of incremental mission development becomes infeasible. This session will explore emerging concepts for adaptive, autonomous robotic systems capable of operating in unknown and extreme environments with minimal prior knowledge or ground intervention. Discussions will center on architectural principles, enabling technologies, and cross-disciplinary insights—from robotics and AI to planetary science and evolutionary biology—that could support one-shot missions to unvisited worlds."
+            />
+          </Timeline.Item>
+        </Timeline>
+
+        <h2>Day 2 - July 29</h2>
+        <Timeline>
+          <Timeline.Item>
+            <b>S04 - Startups and Investment in the New Space Economy</b>
+            <br/>
+            <Time time="10:30 AM - 12:00 PM PT" />
+            <br />
+            Room TBD
+            <Speaker
+              organizations={[""]}
+              name="TBD"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Abstract
+              text="This session will explore the growing role of startups in shaping the future of space robotics, infrastructure, and services. With the lunar economy and commercial space sector rapidly expanding, new opportunities are emerging for early-stage companies to develop innovative technologies and fill critical capability gaps. The panel will feature founders and executives from leading space robotics startups (likely from the LA area) as well as representatives from the venture capital community. Together, they will discuss the technical and business challenges of entering the space market, what investors are looking for, and how partnerships with government and industry can accelerate innovation and deployment."
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Lunch break</b>
+            <br/>
+            <Time time="12:00 - 1:00 PM PT" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Spotlight talks</b>
+            <br/>
+            <Time time="1:00 - 1:30 PM PT" />
+            {/* Location: TBD */}
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S05 - Embodied AI</b>
+            <br/>
+            <Time time="1:30 - 3:00 PM PT" />
+            {/* Location: TBD */}
+            <Speaker
+              organizations={["Georgia Tech, NVIDIA"]}
+              name="Animesh Garg"
+              fixedImg={data.animeshGarg.childImageSharp.fixed}
+              noMargin={true}
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Coffee break</b>
+            <br/>
+            <Time time="3:00 - 3:30 PM PT" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>S06 - Software Simulation for Space Robotics</b>
+            <br/>
+            <Time time="3:30 - 5:00 PM PT" />
+            {/* Location: TBD */}
+            <Speaker
+              organizations={[""]}
+              name="Lutz Richter"
+              fixedImg={data.lutzRichter.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Abstract
+              text="High-fidelity simulation is playing an increasingly critical role in the development, testing, and validation of autonomous robotic systems for space exploration. This session will focus on the state of the art in simulation tools and digital twin frameworks used to model lunar, Martian, and other planetary environments. Topics will include terrain and lighting realism, physics-based simulation, sim-to-real transfer, virtual sensing, and integration of autonomy stacks."
+            />
+          </Timeline.Item>
+        </Timeline>
+      </Section>
+
       <Section title="Sponsors">
         <p>
           The Space Robotics 2025 Workshop is sponsored by the following
