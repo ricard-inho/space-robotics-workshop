@@ -1081,7 +1081,7 @@ export default function Home({ data }) {
         <h2>Day 1 - July 28</h2>
         <Timeline>
           <Timeline.Item>
-            <b>S01 - The Moon as a Testbed for the New Space Economy</b>
+            <b>S01 - Lunar Resource Models to Inform Space Robotics</b>
             <br/>
             <Time time="10:30 AM - 12:00 PM PT" />
             <br />
@@ -1099,7 +1099,7 @@ export default function Home({ data }) {
               noMargin={true}
             />
             <Abstract
-              text="Commercial companies are starting to step on the Moon, while space agencies prepare for humanity's return and a sustained lunar presence that will use the Moon as a proving ground for Mars. The success of these missions will lay the foundation for a lunar economy. This session will examine how commercial innovation is shaping this new space economy, exploring activities such as transportation, in-situ resource utilization (ISRU), and infrastructure construction, as well as the essential roles robotics and autonomy will play in enabling a scalable and sustainable lunar economy."
+              text="The mineral resources map of our solar system is largely blank. These blank spaces are particularly important to new Space companies with a case for high-value Offworld resources (e.g., volatiles, He-3 and other exotic materials). In short, we do not know the scientific, economic or national security value of the terrain that will shape our future as a spacefaring people. Searching and measuring will create a future of abundance for ourselves, not scarcity as we are locked out of future opportunity. In this companion session to S04, we briefly explore concepts of operation for selected lunar resources, as a way of prioritizing Space robotic needs."
             />
           </Timeline.Item>
 
@@ -1158,7 +1158,7 @@ export default function Home({ data }) {
         <h2>Day 2 - July 29</h2>
         <Timeline>
           <Timeline.Item>
-            <b>S04 - Startups and Investment in the New Space Economy</b>
+            <b>S04 - Enabling Technology for Lunar Resources</b>
             <br/>
             <Time time="10:30 AM - 12:00 PM PT" />
             <br />
@@ -1170,7 +1170,7 @@ export default function Home({ data }) {
               noMargin={true}
             />
             <Abstract
-              text="This session will explore the growing role of startups in shaping the future of space robotics, infrastructure, and services. With the lunar economy and commercial space sector rapidly expanding, new opportunities are emerging for early-stage companies to develop innovative technologies and fill critical capability gaps. The panel will feature founders and executives from leading space robotics startups (likely from the LA area) as well as representatives from the venture capital community. Together, they will discuss the technical and business challenges of entering the space market, what investors are looking for, and how partnerships with government and industry can accelerate innovation and deployment."
+              text="Humans cannot build a spacefaring future alone, one camera or wrench or at a time in hostile environments far from Earth. We need robotic automation to detect, assess and extract resources, and to build structures and execute processes at economic scales. The robotics and autonomy needed to make an Offworld economy possible might also revolutionize our terrestrial workflows. In this companion session to S01, we briefly explore the enabling technologies required for lunar resource utilization."
             />
           </Timeline.Item>
 
@@ -1188,7 +1188,7 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S05 - Embodied AI</b>
+            <b>S05 - Embodied AI: Toward General-Purpose Robots</b>
             <br/>
             <Time time="1:30 - 3:00 PM PT" />
             {/* Location: TBD */}
