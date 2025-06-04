@@ -1198,6 +1198,9 @@ export default function Home({ data }) {
               fixedImg={data.animeshGarg.childImageSharp.fixed}
               noMargin={true}
             />
+            <Abstract
+              text="This session examines recent progress at the intersection of AI and robotics, covering advances in Vision-Language-Action Models, Large-Scale Embodied Agents, Dexterous Manipulation, Reinforcement Learning and Sim-to-Real Transfer. These developments are accelerating the deployment of generalist agents capable of perception, reasoning, and control across diverse tasks and embodiments. Talks will focus on how these capabilities are reshaping robotic autonomy, shortening the transition from research to deployment, and informing the path toward general-purpose systems—both on Earth and in space."
+            />
           </Timeline.Item>
 
           <Timeline.Item>
@@ -1212,7 +1215,7 @@ export default function Home({ data }) {
             <Time time="3:30 - 5:00 PM PT" />
             {/* Location: TBD */}
             <Speaker
-              organizations={[""]}
+              organizations={["SoftServe"]}
               name="Lutz Richter"
               fixedImg={data.lutzRichter.childImageSharp.fixed}
               noMargin={true}
@@ -1372,6 +1375,9 @@ export const query = graphql`
     }
     animeshGarg: file(relativePath: { eq: "scientific-committee/animeshGarg.jpg" }) {
       ...FaceThumbnail
+    }
+    animeshGargOrg: file(relativePath: { eq: "scientific-committee/animeshGarg.jpg" }) {
+      ...FluidImage
     }
     keerthanaGopalakrishnanOrg: file(relativePath: { eq: "scientific-committee/keerthanaGopalakrishnan.jpg" }) {
       ...FluidImage
