@@ -875,18 +875,18 @@ export default function Home({ data }) {
             title={
               <span style={{ 
                 fontWeight: isUpcomingDeadline("2025-05-23") ? "normal" : 
-                   isUpcomingDeadline("2025-06-06") ? "bold" : "normal",
+                   isUpcomingDeadline("2025-06-13") ? "bold" : "normal",
                 color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
-               isUpcomingDeadline("2025-06-06") ? "#1890ff" : "inherit"
+               isUpcomingDeadline("2025-06-13") ? "#1890ff" : "inherit"
               }}>
-                Paper Submission Deadline - Non-Archival Track
+                Paper Submission Deadline - Non-Archival Track (Extended)
               </span>
             }
-            description="June 6th, 2025"
+            description="June 13th, 2025"
           />
           <Step
-            title="Paper Notification - Archival Track"
-            description="June 6th, 2025"
+            title="Paper Notification - Archival Track (Extended)"
+            description="June 13th, 2025"
           />
           <Step
             title="Paper Notification - Non-Archival Track"
@@ -931,7 +931,7 @@ export default function Home({ data }) {
         <Alert
           message={
             <>
-              <strong>Hurry! There is still time to submit! </strong>{" "}
+              <strong>Good news! The non-archival submission deadline has been extended to June 13th. </strong>{" "}
               <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
                 Submit here (EasyChair portal) <LaunchIcon fontSize="inherit" />
               </a>
@@ -1052,11 +1052,11 @@ export default function Home({ data }) {
               <tr>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Paper Submission deadline</td>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>May 23</strong></td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 6</strong></td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
               </tr>
               <tr>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Acceptance Notification</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 6</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
               </tr>
               <tr>
@@ -1354,6 +1354,9 @@ export const query = graphql`
       ...FluidImage
     }
     ricardMarsalOrg: file(relativePath: { eq: "organizers/ricardMarsal.jpeg" }) {
+      ...FluidImage
+    }
+    roshanKalghatgiOrg: file(relativePath: { eq: "organizers/roshanKalghatgi.png" }) {
       ...FluidImage
     }
     maggieWangOrg: file(relativePath: { eq: "organizers/maggieWang.jpg" }) {
