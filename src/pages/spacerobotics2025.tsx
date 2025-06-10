@@ -1235,9 +1235,9 @@ export default function Home({ data }) {
         <p>
           <center>
             <div className={style.sponsorContainer} style={{ textAlign: "center" }}>
-              <a href="https://www.nvidia.com/" target="_blank">
+              {/* <a href="https://www.nvidia.com/" target="_blank">
                 <img src={NVIDIA} alt="NVIDIA" className={style.nvidia} />
-              </a>
+              </a> */}
 
               <a href="https://www.softserveinc.com/" target="_blank">
                 <img src={SOFTSERVE} alt="SOFTSERVE" className={style.softserve} />
