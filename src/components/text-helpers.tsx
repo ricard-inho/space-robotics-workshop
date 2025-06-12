@@ -23,6 +23,12 @@ export const SubSection = (props: {
 // headerId is used to convert a header string into its hash
 // (i.e., embodied-ai.org/#header-hash-name).
 export function headerId(header: string) {
+  if (!header) {
+    if (process.env.NODE_ENV !== "production") {
+      console.warn("headerId called with undefined or empty header!");
+    }
+    return "";
+  }
   return header.replace(/\s/g, "-").toLowerCase();
 }
 
