@@ -13,6 +13,7 @@ import LaunchIcon from "@material-ui/icons/Launch";
 import ReceiptIcon from "@material-ui/icons/Receipt";
 import AttachFileIcon from "@material-ui/icons/AttachFile";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import { PlayCircleFilled } from "@ant-design/icons";
 import moment from "moment-timezone";
 import Img, { FixedObject, FluidObject } from "gatsby-image";
 
