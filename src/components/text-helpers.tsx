@@ -23,9 +23,10 @@ export const SubSection = (props: {
 // headerId is used to convert a header string into its hash
 // (i.e., embodied-ai.org/#header-hash-name).
 export function headerId(header: string) {
-  if (!header) {
-    if (process.env.NODE_ENV !== "production") {
-      console.warn("headerId called with undefined or empty header!");
+  // Handle undefined, null, or non-string values
+  if (!header || typeof header !== 'string') {
+    if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== "production") {
+      console.warn("headerId called with invalid header:", header);
     }
     return "";
   }
@@ -38,7 +39,9 @@ export function headerId(header: string) {
 export function Section(props: { title: string; children: React.ReactNode }) {
   const defaultHashOpacity = 0,
     hoverHashOpacity = 0.3,
-    hash = headerId(String(props.title)),
+    // Ensure title is always a string before passing to headerId
+    safeTitle = props.title || "",
+    hash = headerId(safeTitle),
     [hashOpacity, setHashOpacity] = useState(defaultHashOpacity);
 
   return (
@@ -60,7 +63,7 @@ export function Section(props: { title: string; children: React.ReactNode }) {
             window.location.hash = hash;
           }}
         >
-          {props.title}
+          {safeTitle}
         </h1>
       </div>
       {props.children}

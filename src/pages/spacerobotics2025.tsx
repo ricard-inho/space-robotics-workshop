@@ -19,6 +19,7 @@ import Img, { FixedObject, FluidObject } from "gatsby-image";
 import bannerImage from '../../static/images/spacerobotics2025/srw25-banner-3.png';
 import NVIDIA from "../../static/images/sponsors/nvidia.svg";
 import SOFTSERVE from "../../static/images/sponsors/softserve-logo-big.png";
+import laCompaniesMap from "../../static/images/location/la_companies_map.png";
 
 import SlackLogo from "../../static/icons/slack.svg";
 
@@ -1291,7 +1292,7 @@ export default function Home({ data }) {
 
       <Section title="Venue">
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', flexWrap: 'wrap' }}>
-          <img src={require('../../static/images/location/la_companies_map.png')} alt="LA Companies Map" style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+          <img src={laCompaniesMap} alt="LA Companies Map" style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
           <div style={{ flex: 1, minWidth: '250px' }}>
             <p>
               The <a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a> offers a uniquely inspiring venue for the 2nd Space Robotics Workshop. As the permanent home of the Space Shuttle Endeavour, and soon the world's only vertical launch display complete with external tank and solid rocket boosters, it grounds our discussions in the tangible legacy and future of spaceflight. Situated in the heart of Los Angeles, the Center links us to a vibrant ecosystem of innovation, science, and exploration.
