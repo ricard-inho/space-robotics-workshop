@@ -1229,6 +1229,12 @@ export default function Home({ data }) {
               fixedImg={data.luisSentis.childImageSharp.fixed}
               noMargin={true}
             />
+            <Speaker
+              organizations={["NASA"]}
+              name="Ignacio López-Francos"
+              fixedImg={data.ignacioGLopezFrancos.childImageSharp.fixed}
+              noMargin={true}
+            />
             <Abstract
               text="As we extend robotic exploration to Mars and prepare for missions to more distant worlds, increasing levels of autonomy will be essential. Far from Earth and constrained by communication delays, robotic systems must be capable of perceiving their environment, making decisions, and acting independently to accomplish science and mission objectives. This session will explore the key robotics and autonomy technologies that NASA and its partners must develop or mature to support the Moon-to-Mars architecture. It will also examine how recent advances in AI can help accelerate progress toward resilient, adaptable, intelligent systems in support of this vision."
             />
@@ -1441,6 +1447,9 @@ export const query = graphql`
       ...FaceThumbnail
     }
     luisSentis: file(relativePath: { eq: "scientific-committee/luisSentis.png" }) {
+      ...FaceThumbnail
+    }
+    ignacioGLopezFrancos: file(relativePath: { eq: "organizers/ignacioGLopezFrancos.png" }) {
       ...FaceThumbnail
     }
     hiroOno: file(relativePath: { eq: "scientific-committee/hiroOno.jpg" }) {
