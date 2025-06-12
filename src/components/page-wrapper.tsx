@@ -70,10 +70,15 @@ export default class PageWrapper extends React.Component<
   updateHeaderLocations() {
     this.setState({
       headerIdLocations: this.props.children.map(
-        (section: any) =>
-          document
-            .getElementById(headerId(section.props.title))
-            .getBoundingClientRect().top + window.scrollY
+        (section: any) => {
+          const id = headerId(section.props.title);
+          const element = document.getElementById(id);
+          if (!element) {
+            console.warn(`Element with id "${id}" not found for section:`, section.props.title);
+            return 0; // Default position if element not found
+          }
+          return element.getBoundingClientRect().top + window.scrollY;
+        }
       ),
     });
   }
