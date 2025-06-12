@@ -824,6 +824,16 @@ export default function Home({ data }) {
         />
       }
     >
+      <Alert
+        message={
+          <>
+            <strong>Registration is now open!</strong> Secure your spot at the 2nd Space Robotics Workshop and take advantage of early rates through June 15. A full SMC-IT/SCC conference registration is required to participate in the workshop. <a href="https://web.cvent.com/event/20ad649d-7501-4023-89af-19fbd851868e/websitePage:f5f1940b-980e-4398-96f6-3b681ef5e4a3?i=EQw8ANtxAkyS2Y_OqYfepA" target="_blank" rel="noopener noreferrer">Register here</a>.
+          </>
+        }
+        type="success"
+        showIcon={false}
+        style={{ marginBottom: '1em', marginTop: '1em' }}
+      />
       <Section title="Overview">
         <p>
           The <strong>2nd Space Robotics Workshop (SRW)</strong> will be held in conjunction with the <strong><a href="https://2025.smcit-scc.space/" target="_blank" rel="noopener noreferrer">IEEE SMC-IT/SCC</a></strong> from <strong>July 28-29, 2025</strong>, at the <strong><a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a></strong> in <strong>Los Angeles, CA</strong>. The workshop will bring together experts in robotics, autonomy, AI, and aerospace to shape the next era of innovation driving our return to the Moon, the sustainable exploration of Mars and beyond, and the expansion of commercial activity beyond Earth orbit.
@@ -1149,6 +1159,12 @@ export default function Home({ data }) {
               fixedImg={data.hiroOno.childImageSharp.fixed}
               noMargin={true}
             />
+            <Speaker
+              organizations={["Honeybee Robotics, Blue Origin"]}
+              name="Kevin Hubbard"
+              fixedImg={data.kevinHubbard.childImageSharp.fixed}
+              noMargin={true}
+            />
             <Abstract
               text="As we look beyond Mars toward the outer Solar System, the traditional model of incremental mission development becomes infeasible. This session will explore emerging concepts for adaptive, autonomous robotic systems capable of operating in unknown and extreme environments with minimal prior knowledge or ground intervention. Discussions will center on architectural principles, enabling technologies, and cross-disciplinary insights—from robotics and AI to planetary science and evolutionary biology—that could support one-shot missions to unvisited worlds."
             />
@@ -1227,26 +1243,6 @@ export default function Home({ data }) {
         </Timeline>
       </Section>
 
-      <Section title="Sponsors">
-        <p>
-          The Space Robotics 2025 Workshop is sponsored by the following
-          organizations:
-        </p>
-        <p>
-          <center>
-            <div className={style.sponsorContainer} style={{ textAlign: "center" }}>
-              <a href="https://www.nvidia.com/" target="_blank">
-                <img src={NVIDIA} alt="NVIDIA" className={style.nvidia} />
-              </a>
-
-              <a href="https://www.softserveinc.com/" target="_blank">
-                <img src={SOFTSERVE} alt="SOFTSERVE" className={style.softserve} />
-              </a>
-            </div>
-          </center>
-        </p>
-      </Section>
-
       <Section title="Organizers">
         <p>
           The 2nd Space Robotics Workshop is a volunteer led effort by researchers and practitioners in the field of robotics, autonomy, and AI from multiple organizations. We are grateful to be supported by a Scientific Committee composed of leading experts across academia, industry, and government, who help ensure the quality, relevance, and impact of the program.
@@ -1271,6 +1267,37 @@ export default function Home({ data }) {
             data={data}
           />
         </SubSection>
+      </Section>
+
+      <Section title="Sponsors">
+        <p>
+          The Space Robotics 2025 Workshop is sponsored by the following
+          organizations:
+        </p>
+        <p>
+          <center>
+            <div className={style.sponsorContainer} style={{ textAlign: "center" }}>
+              {/* <a href="https://www.nvidia.com/" target="_blank">
+                <img src={NVIDIA} alt="NVIDIA" className={style.nvidia} />
+              </a> */}
+
+              <a href="https://www.softserveinc.com/" target="_blank">
+                <img src={SOFTSERVE} alt="SOFTSERVE" className={style.softserve} />
+              </a>
+            </div>
+          </center>
+        </p>
+      </Section>
+
+      <Section title="Venue">
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', flexWrap: 'wrap' }}>
+          <img src={require('../../static/images/location/la_companies_map.png')} alt="LA Companies Map" style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
+          <div style={{ flex: 1, minWidth: '250px' }}>
+            <p>
+              The <a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a> offers a uniquely inspiring venue for the 2nd Space Robotics Workshop. As the permanent home of the Space Shuttle Endeavour, and soon the world's only vertical launch display complete with external tank and solid rocket boosters, it grounds our discussions in the tangible legacy and future of spaceflight. Situated in the heart of Los Angeles, the Center links us to a vibrant ecosystem of innovation, science, and exploration.
+            </p>
+          </div>
+        </div>
       </Section>
     </PageWrapper>
   );
@@ -1438,6 +1465,9 @@ export const query = graphql`
       ...FluidImage
     }
     lutzRichter: file(relativePath: { eq: "speakers/lutzRichter.png" }) {
+      ...FaceThumbnail
+    }
+    kevinHubbard: file(relativePath: { eq: "speakers/kevinHubbard.jpg" }) {
       ...FaceThumbnail
     }
   }
