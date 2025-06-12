@@ -749,6 +749,96 @@ const isUpcomingDeadline = (deadlineDate) => {
   return deadline > today;
 };
 
+// Add this component before the main export function
+function VenueSection({ data }) {
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  return (
+    <>
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', flexWrap: 'wrap' }}>
+        <img 
+          src={laCompaniesMap} 
+          alt="LA Companies Map" 
+          style={{ 
+            maxWidth: '800px', 
+            width: '100%', 
+            height: 'auto', 
+            borderRadius: '8px', 
+            marginBottom: '20px',
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease-in-out'
+          }}
+          onClick={() => setModalVisible(true)}
+          onMouseEnter={(e) => e.target.style.transform = 'scale(1.02)'}
+          onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+        />
+        <div style={{ flex: 1, minWidth: '250px' }}>
+          <p>
+            The <a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a> offers a uniquely inspiring venue for the 2nd Space Robotics Workshop. As the permanent home of the Space Shuttle Endeavour, and soon the world's only vertical launch display complete with external tank and solid rocket boosters, it grounds our discussions in the tangible legacy and future of spaceflight. Situated in the heart of Los Angeles, the Center links us to a vibrant ecosystem of innovation, science, and exploration.
+          </p>
+          <p style={{ fontSize: '14px', color: '#666', fontStyle: 'italic' }}>
+            Click on the map to view it in full size.
+          </p>
+        </div>
+      </div>
+
+      {/* Modal for full-size image */}
+      {modalVisible && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 1000,
+            cursor: 'pointer'
+          }}
+          onClick={() => setModalVisible(false)}
+        >
+          <div style={{ position: 'relative', maxWidth: '95%', maxHeight: '95%' }}>
+            <img 
+              src={laCompaniesMap} 
+              alt="LA Companies Map - Full Size"
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                borderRadius: '8px',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)'
+              }}
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: 'rgba(255, 255, 255, 0.9)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '40px',
+                height: '40px',
+                fontSize: '20px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+              onClick={() => setModalVisible(false)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 // And finally, we add all the content into their respective sections.
 export default function Home({ data }) {
   const [windowWidth, setWindowWidth] = React.useState(getWindowWidth());
@@ -1139,6 +1229,12 @@ export default function Home({ data }) {
               fixedImg={data.luisSentis.childImageSharp.fixed}
               noMargin={true}
             />
+            <Speaker
+              organizations={["NASA"]}
+              name="Ignacio López-Francos"
+              fixedImg={data.ignacioGLopezFrancos.childImageSharp.fixed}
+              noMargin={true}
+            />
             <Abstract
               text="As we extend robotic exploration to Mars and prepare for missions to more distant worlds, increasing levels of autonomy will be essential. Far from Earth and constrained by communication delays, robotic systems must be capable of perceiving their environment, making decisions, and acting independently to accomplish science and mission objectives. This session will explore the key robotics and autonomy technologies that NASA and its partners must develop or mature to support the Moon-to-Mars architecture. It will also examine how recent advances in AI can help accelerate progress toward resilient, adaptable, intelligent systems in support of this vision."
             />
@@ -1162,7 +1258,7 @@ export default function Home({ data }) {
               noMargin={true}
             />
             <Speaker
-              organizations={["Honeybee Robotics, Blue Origin"]}
+              organizations={["Honeybee Robotics (Blue Origin)"]}
               name="Kevin Hubbard"
               fixedImg={data.kevinHubbard.childImageSharp.fixed}
               noMargin={true}
@@ -1245,6 +1341,10 @@ export default function Home({ data }) {
         </Timeline>
       </Section>
 
+      <Section title="Venue">
+        <VenueSection data={data} />
+      </Section>
+
       <Section title="Organizers">
         <p>
           The 2nd Space Robotics Workshop is a volunteer led effort by researchers and practitioners in the field of robotics, autonomy, and AI from multiple organizations. We are grateful to be supported by a Scientific Committee composed of leading experts across academia, industry, and government, who help ensure the quality, relevance, and impact of the program.
@@ -1291,16 +1391,7 @@ export default function Home({ data }) {
         </p>
       </Section>
 
-      <Section title="Venue">
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', flexWrap: 'wrap' }}>
-          <img src={laCompaniesMap} alt="LA Companies Map" style={{ maxWidth: '400px', width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '20px' }} />
-          <div style={{ flex: 1, minWidth: '250px' }}>
-            <p>
-              The <a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a> offers a uniquely inspiring venue for the 2nd Space Robotics Workshop. As the permanent home of the Space Shuttle Endeavour, and soon the world's only vertical launch display complete with external tank and solid rocket boosters, it grounds our discussions in the tangible legacy and future of spaceflight. Situated in the heart of Los Angeles, the Center links us to a vibrant ecosystem of innovation, science, and exploration.
-            </p>
-          </div>
-        </div>
-      </Section>
+
     </PageWrapper>
   );
 }
@@ -1356,6 +1447,9 @@ export const query = graphql`
       ...FaceThumbnail
     }
     luisSentis: file(relativePath: { eq: "scientific-committee/luisSentis.png" }) {
+      ...FaceThumbnail
+    }
+    ignacioGLopezFrancos: file(relativePath: { eq: "organizers/ignacioGLopezFrancos.png" }) {
       ...FaceThumbnail
     }
     hiroOno: file(relativePath: { eq: "scientific-committee/hiroOno.jpg" }) {
