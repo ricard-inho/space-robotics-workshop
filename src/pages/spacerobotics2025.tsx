@@ -16,6 +16,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import { PlayCircleFilled } from "@ant-design/icons";
 import moment from "moment-timezone";
 import Img, { FixedObject, FluidObject } from "gatsby-image";
+import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
 
 import bannerImage from '../../static/images/spacerobotics2025/srw25-banner-3.png';
 import NVIDIA from "../../static/images/sponsors/nvidia.svg";
@@ -1104,153 +1105,6 @@ export default function Home({ data }) {
         <VenueSection data={data} />
       </Section>
 
-      <Section title="Call for Papers">
-        <Alert
-          message={
-            <>
-              <strong>Our Call for Papers is now closed!</strong> A huge thanks to everyone who submitted their work. We've begun sending out acceptance notifications to authors and we'll be announcing the selected spotlight presentations soon!
-            </>
-          }
-          type="success"
-          showIcon={false}
-          style={{ marginBottom: '1em' }}
-        />
-        <p>
-          We invite submissions on research and development at the intersection of robotics, autonomy, and space applications. Contributions should highlight innovative methods, systems, and technologies for exploration, in-space services, or science operations beyond Earth.
-        </p>
-        <p><strong>Relevant topics:</strong></p>
-        <ul>
-          <li>
-            Autonomous navigation and mobility for planetary and orbital environments, including terrain-relative localization, path planning, and novel locomotion systems (e.g., rovers, drones, subsurface robots).
-          </li>
-          <li>
-            Manipulation in space and planetary environments, including dexterous handling, microgravity operations, and contact dynamics in ISAM or EVA contexts.
-          </li>
-          <li>
-            In-space Servicing, Assembly, and Manufacturing (ISAM) and In-situ Resource Utilization (ISRU) enabled by robotic autonomy.
-          </li>
-          <li>
-            AI agents for perception, decision-making, task planning, and multi-robot coordination in space environments.
-          </li>
-          <li>
-            Foundation models and multimodal learning (vision-language-action) for general-purpose space robotic systems.
-          </li>
-          <li>
-            Photogrammetry, Neural Radiance Fields (NeRFs), 3D Gaussian Splatting (3DGS), and other volumetric representation techniques for environment modeling and scene understanding, particularly under challenging illumination conditions.
-          </li>
-          <li>
-            Human-robot teaming strategies for crewed and uncrewed missions, including shared autonomy, intent recognition, and adaptive interfaces.
-          </li>
-          <li>
-            Sim-to-real transfer, domain adaptation, and policy generalization for space-deployed systems.
-          </li>
-          <li>
-            High-fidelity simulation and digital twins for development, integration, testing, and mission rehearsal.
-          </li>
-          <li>
-            Long-duration autonomy and adaptive learning in unstructured, dynamic, or high-latency environments.
-          </li>
-          <li>
-            Autonomous surface operations, including science-driven exploration, sample collection, and real-time decision-making under resource constraints.
-          </li>
-          <li>
-            Spacecraft swarms and distributed robotic systems, including satellite formation flying, multi-agent planning, and inter-agent communication.
-          </li>
-          <li>
-            Space logistics, infrastructure deployment, and robotic construction, supporting scalable off-world operations.
-          </li>
-          <li>
-            System integration, testing, and field validation of space robotic platforms in analog or operational environments.
-          </li>
-          <li>
-            Mission concepts, technology demonstrations, and commercial initiatives accelerating the adoption of space robotics.
-          </li>
-          <li>
-            Trust, verification, and validation frameworks to ensure robust, explainable, and resilient autonomous behavior.
-          </li>
-        </ul>
-
-        <SubSection title="Submission Guidelines">
-          <ul>
-            <li>
-              Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: 
-              <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
-            </li>
-            <li>
-              Submissions must be made through the 
-              <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. 
-              Please select the <strong>"Space Robotics Workshop"</strong> track.
-            </li>
-            <li>
-              Authors may choose between two submission options:
-              <ul>
-                <li>
-                  <strong>Archival Track (IEEE Proceedings):</strong> Papers will be included in the official IEEE conference proceedings (indexed in IEEE Xplore).
-                </li>
-                <li>
-                  <strong>Non-Archival Track:</strong> For authors who wish to present without publication, preserving eligibility for future archival venues.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Papers selected for IEEE publication must be presented <strong>in person</strong> to comply with IEEE's "Podium and Publish" policy.
-            </li>
-            <li>
-              Authors who opt out of IEEE publication may still present at the workshop and are encouraged to contribute to discussions and community-building.
-            </li>
-            <li>
-              All submissions will be <strong>peer reviewed</strong> for quality and relevance.
-            </li>
-            <li>
-              At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
-            </li>
-            <li>
-              All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
-            </li>
-            <li>
-              Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More details will be shared later.
-            </li>
-          </ul>
-        </SubSection>
-
-        <SubSection title="Important Dates">
-          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "15px", marginBottom: "20px" }}>
-            <thead>
-              <tr>
-                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Milestone</th>
-                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Archival Track (IEEE)</th>
-                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Non-Archival Track</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Paper Submission deadline</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>May 23</strong></td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
-              </tr>
-              <tr>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Acceptance Notification</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
-              </tr>
-              <tr>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Camera-ready deadline</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>July 7</td>
-              </tr>
-            </tbody>
-          </table>
-        </SubSection>
-
-        <div style={{ marginTop: "30px", marginBottom: "20px" }}>
-          <hr style={{ border: "1px solid #eee" }} />
-          <p style={{ marginTop: "20px" }}>
-            For any questions, please feel free to reach out to:<br />
-            📩 <a href="mailto:ignacio.lopez-francos@nasa.gov">ignacio.lopez-francos@nasa.gov</a><br />
-            📩 <a href="mailto:marcel.kaufmann@jpl.nasa.gov">marcel.kaufmann@jpl.nasa.gov</a>
-          </p>
-        </div>
-      </Section>
       <Section title="Workshop Schedule">
         <h2>Day 1 - July 28</h2>
         <Timeline>
@@ -1425,6 +1279,154 @@ export default function Home({ data }) {
         </Timeline>
       </Section>
 
+      <Section title="Call for Papers">
+        <Alert
+          message={
+            <>
+              <strong>Our Call for Papers is now closed!</strong> A huge thanks to everyone who submitted their work. We've begun sending out acceptance notifications to authors and we'll be announcing the selected spotlight presentations soon!
+            </>
+          }
+          type="success"
+          showIcon={false}
+          style={{ marginBottom: '1em' }}
+        />
+        <p>
+          We invite submissions on research and development at the intersection of robotics, autonomy, and space applications. Contributions should highlight innovative methods, systems, and technologies for exploration, in-space services, or science operations beyond Earth.
+        </p>
+        <p><strong>Relevant topics:</strong></p>
+        <ul>
+          <li>
+            Autonomous navigation and mobility for planetary and orbital environments, including terrain-relative localization, path planning, and novel locomotion systems (e.g., rovers, drones, subsurface robots).
+          </li>
+          <li>
+            Manipulation in space and planetary environments, including dexterous handling, microgravity operations, and contact dynamics in ISAM or EVA contexts.
+          </li>
+          <li>
+            In-space Servicing, Assembly, and Manufacturing (ISAM) and In-situ Resource Utilization (ISRU) enabled by robotic autonomy.
+          </li>
+          <li>
+            AI agents for perception, decision-making, task planning, and multi-robot coordination in space environments.
+          </li>
+          <li>
+            Foundation models and multimodal learning (vision-language-action) for general-purpose space robotic systems.
+          </li>
+          <li>
+            Photogrammetry, Neural Radiance Fields (NeRFs), 3D Gaussian Splatting (3DGS), and other volumetric representation techniques for environment modeling and scene understanding, particularly under challenging illumination conditions.
+          </li>
+          <li>
+            Human-robot teaming strategies for crewed and uncrewed missions, including shared autonomy, intent recognition, and adaptive interfaces.
+          </li>
+          <li>
+            Sim-to-real transfer, domain adaptation, and policy generalization for space-deployed systems.
+          </li>
+          <li>
+            High-fidelity simulation and digital twins for development, integration, testing, and mission rehearsal.
+          </li>
+          <li>
+            Long-duration autonomy and adaptive learning in unstructured, dynamic, or high-latency environments.
+          </li>
+          <li>
+            Autonomous surface operations, including science-driven exploration, sample collection, and real-time decision-making under resource constraints.
+          </li>
+          <li>
+            Spacecraft swarms and distributed robotic systems, including satellite formation flying, multi-agent planning, and inter-agent communication.
+          </li>
+          <li>
+            Space logistics, infrastructure deployment, and robotic construction, supporting scalable off-world operations.
+          </li>
+          <li>
+            System integration, testing, and field validation of space robotic platforms in analog or operational environments.
+          </li>
+          <li>
+            Mission concepts, technology demonstrations, and commercial initiatives accelerating the adoption of space robotics.
+          </li>
+          <li>
+            Trust, verification, and validation frameworks to ensure robust, explainable, and resilient autonomous behavior.
+          </li>
+        </ul>
+
+        <SubSection title="Submission Guidelines">
+          <ul>
+            <li>
+              Full papers can be up to <strong>10 pages</strong>, not including references. Paper templates are available here: 
+              <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Templates</a>.
+            </li>
+            <li>
+              Submissions must be made through the 
+              <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">EasyChair portal</a>. 
+              Please select the <strong>"Space Robotics Workshop"</strong> track.
+            </li>
+            <li>
+              Authors may choose between two submission options:
+              <ul>
+                <li>
+                  <strong>Archival Track (IEEE Proceedings):</strong> Papers will be included in the official IEEE conference proceedings (indexed in IEEE Xplore).
+                </li>
+                <li>
+                  <strong>Non-Archival Track:</strong> For authors who wish to present without publication, preserving eligibility for future archival venues.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Papers selected for IEEE publication must be presented <strong>in person</strong> to comply with IEEE's "Podium and Publish" policy.
+            </li>
+            <li>
+              Authors who opt out of IEEE publication may still present at the workshop and are encouraged to contribute to discussions and community-building.
+            </li>
+            <li>
+              All submissions will be <strong>peer reviewed</strong> for quality and relevance.
+            </li>
+            <li>
+              At least <strong>one author of each accepted paper</strong> must register for IEEE SMC-IT/SCC with an <strong>in-person registration</strong> and attend the workshop.
+            </li>
+            <li>
+              All accepted papers will be presented as <strong>posters</strong> during the workshop. A select number of top submissions will be invited for <strong>spotlight presentations</strong>, based on reviewer feedback and program needs.
+            </li>
+            <li>
+              Selected papers may be invited to appear in a <strong>special issue of a journal</strong>. More details will be shared later.
+            </li>
+          </ul>
+        </SubSection>
+
+        <SubSection title="Important Dates">
+          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "15px", marginBottom: "20px" }}>
+            <thead>
+              <tr>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Milestone</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Archival Track (IEEE)</th>
+                <th style={{ padding: "8px", textAlign: "left", borderBottom: "2px solid #ddd" }}>Non-Archival Track</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Paper Submission deadline</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>May 23</strong></td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Acceptance Notification</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Camera-ready deadline</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>July 7</td>
+              </tr>
+            </tbody>
+          </table>
+        </SubSection>
+
+        <div style={{ marginTop: "30px", marginBottom: "20px" }}>
+          <hr style={{ border: "1px solid #eee" }} />
+          <p style={{ marginTop: "20px" }}>
+            For any questions, please feel free to reach out to:<br />
+            📩 <a href="mailto:ignacio.lopez-francos@nasa.gov">ignacio.lopez-francos@nasa.gov</a><br />
+            📩 <a href="mailto:marcel.kaufmann@jpl.nasa.gov">marcel.kaufmann@jpl.nasa.gov</a>
+          </p>
+        </div>
+      </Section>
+
       <Section title="Organizers">
         <p>
           The 2nd Space Robotics Workshop is a volunteer led effort by researchers and practitioners in the field of robotics, autonomy, and AI from multiple organizations. We are grateful to be supported by a Scientific Committee composed of leading experts across academia, industry, and government, who help ensure the quality, relevance, and impact of the program.
@@ -1471,7 +1473,14 @@ export default function Home({ data }) {
         </p>
       </Section>
 
-
+      <footer>
+        <a href="//github.com/ricard-inho/space-robotics-workshop" target="_blank">
+          <GithubFilled className={style.footerIcon} />
+        </a>
+        <a href="//linkedin.com/company/spacerobots" target="_blank">
+          <LinkedinFilled className={style.footerIcon} />
+        </a>
+      </footer>
     </PageWrapper>
   );
 }
