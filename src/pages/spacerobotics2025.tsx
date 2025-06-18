@@ -749,6 +749,44 @@ const isUpcomingDeadline = (deadlineDate) => {
   return deadline > today;
 };
 
+// Function to determine current timeline step based on today's date
+const getCurrentTimelineStep = () => {
+  const today = new Date();
+  const deadlines = [
+    { date: "2025-04-01", step: 0 }, // Workshop Announced
+    { date: "2025-05-23", step: 1 }, // Paper Submission - Archival
+    { date: "2025-06-13", step: 2 }, // Paper Submission - Non-Archival
+    { date: "2025-06-13", step: 3 }, // Paper Notification - Archival
+    { date: "2025-06-20", step: 4 }, // Paper Notification - Non-Archival
+    { date: "2025-06-20", step: 5 }, // Camera-Ready - Archival
+    { date: "2025-07-07", step: 6 }, // Camera-Ready - Non-Archival
+    { date: "2025-07-28", step: 7 }, // Workshop
+  ];
+
+  // Find the current step - the last deadline that has passed
+  let currentStep = 0;
+  for (const deadline of deadlines) {
+    const deadlineDate = new Date(deadline.date);
+    if (today >= deadlineDate) {
+      currentStep = deadline.step;
+    } else {
+      break;
+    }
+  }
+  
+  // If we're between steps, show the next upcoming step as current
+  if (currentStep < deadlines.length - 1) {
+    return currentStep + 1;
+  }
+  
+  return currentStep;
+};
+
+// Function to determine if a step should be highlighted
+const isCurrentStep = (stepIndex) => {
+  return getCurrentTimelineStep() === stepIndex;
+};
+
 // Add this component before the main export function
 function VenueSection({ data }) {
   const [modalVisible, setModalVisible] = React.useState(false);
@@ -960,13 +998,13 @@ export default function Home({ data }) {
       </Section>
 
       <Section title="Timeline">
-        <Steps progressDot current={1} direction="vertical">
+        <Steps progressDot current={getCurrentTimelineStep()} direction="vertical">
           <Step title="Workshop Announced" description="April 1st, 2025" />
           <Step
             title={
               <span style={{ 
-                fontWeight: isUpcomingDeadline("2025-05-23") ? "bold" : "normal",
-                color: isUpcomingDeadline("2025-05-23") ? "#1890ff" : "inherit"
+                fontWeight: isCurrentStep(1) ? "bold" : "normal",
+                color: isCurrentStep(1) ? "#1890ff" : "inherit"
               }}>
                 Paper Submission Deadline - Archival Track
               </span>
@@ -976,10 +1014,8 @@ export default function Home({ data }) {
           <Step
             title={
               <span style={{ 
-                fontWeight: isUpcomingDeadline("2025-05-23") ? "normal" : 
-                   isUpcomingDeadline("2025-06-13") ? "bold" : "normal",
-                color: isUpcomingDeadline("2025-05-23") ? "inherit" : 
-               isUpcomingDeadline("2025-06-13") ? "#1890ff" : "inherit"
+                fontWeight: isCurrentStep(2) ? "bold" : "normal",
+                color: isCurrentStep(2) ? "#1890ff" : "inherit"
               }}>
                 Paper Submission Deadline - Non-Archival Track (Extended)
               </span>
@@ -987,23 +1023,58 @@ export default function Home({ data }) {
             description="June 13th, 2025"
           />
           <Step
-            title="Paper Notification - Archival Track (Extended)"
+            title={
+              <span style={{ 
+                fontWeight: isCurrentStep(3) ? "bold" : "normal",
+                color: isCurrentStep(3) ? "#1890ff" : "inherit"
+              }}>
+                Paper Notification - Archival Track (Extended)
+              </span>
+            }
             description="June 13th, 2025"
           />
           <Step
-            title="Paper Notification - Non-Archival Track"
+            title={
+              <span style={{ 
+                fontWeight: isCurrentStep(4) ? "bold" : "normal",
+                color: isCurrentStep(4) ? "#1890ff" : "inherit"
+              }}>
+                Paper Notification - Non-Archival Track
+              </span>
+            }
             description="June 20th, 2025"
           />
           <Step
-            title="Final Camera-Ready Deadline - Archival Track"
+            title={
+              <span style={{ 
+                fontWeight: isCurrentStep(5) ? "bold" : "normal",
+                color: isCurrentStep(5) ? "#1890ff" : "inherit"
+              }}>
+                Final Camera-Ready Deadline - Archival Track
+              </span>
+            }
             description="June 20th, 2025"
           />
           <Step
-            title="Final Camera-Ready Deadline - Non-Archival Track"
+            title={
+              <span style={{ 
+                fontWeight: isCurrentStep(6) ? "bold" : "normal",
+                color: isCurrentStep(6) ? "#1890ff" : "inherit"
+              }}>
+                Final Camera-Ready Deadline - Non-Archival Track
+              </span>
+            }
             description="July 7th, 2025"
           />
           <Step
-            title="Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC"
+            title={
+              <span style={{ 
+                fontWeight: isCurrentStep(7) ? "bold" : "normal",
+                color: isCurrentStep(7) ? "#1890ff" : "inherit"
+              }}>
+                Second Annual Space Robotics Workshop at IEEE SMC-IT/SCC
+              </span>
+            }
             description={
               <>
                 <a
@@ -1029,17 +1100,18 @@ export default function Home({ data }) {
         </Steps>
       </Section>
 
+      <Section title="Venue">
+        <VenueSection data={data} />
+      </Section>
+
       <Section title="Call for Papers">
         <Alert
           message={
             <>
-              <strong>Good news! The non-archival submission deadline has been extended to June 13th. </strong>{" "}
-              <a href="https://easychair.org/conferences/?conf=smcitscc2025" target="_blank" rel="noopener noreferrer">
-                Submit here (EasyChair portal) <LaunchIcon fontSize="inherit" />
-              </a>
+              <strong>Our Call for Papers is now closed!</strong> A huge thanks to everyone who submitted their work. We've begun sending out acceptance notifications to authors and we'll be announcing the selected spotlight presentations soon!
             </>
           }
-          type="info"
+          type="success"
           showIcon={false}
           style={{ marginBottom: '1em' }}
         />
@@ -1188,15 +1260,15 @@ export default function Home({ data }) {
             <Time time="10:30 AM - 12:00 PM PT" />
             <br />
             Room TBD
-            {/* <Speaker
-              organizations={[""]}
-              name="John Stock"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            /> */}
             <Speaker
               organizations={["NASA KSC"]}
               name="Rob Mueller"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Speaker
+              organizations={["Skycorp, Inc"]}
+              name="Dennis Wingo"
               fixedImg={data.default.childImageSharp.fixed}
               noMargin={true}
             />
@@ -1219,7 +1291,7 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S02 - Robotics and Autonomy for Mars</b>
+            <b>S02 - Mars Settlement Starts with Autonomy and Robotics</b>
             <br/>
             <Time time="1:30 - 3:00 PM PT" />
             {/* Location: TBD */}
@@ -1236,7 +1308,7 @@ export default function Home({ data }) {
               noMargin={true}
             />
             <Abstract
-              text="As we extend robotic exploration to Mars and prepare for missions to more distant worlds, increasing levels of autonomy will be essential. Far from Earth and constrained by communication delays, robotic systems must be capable of perceiving their environment, making decisions, and acting independently to accomplish science and mission objectives. This session will explore the key robotics and autonomy technologies that NASA and its partners must develop or mature to support the Moon-to-Mars architecture. It will also examine how recent advances in AI can help accelerate progress toward resilient, adaptable, intelligent systems in support of this vision."
+              text="As we extend robotic exploration to Mars and lay the groundwork for crewed missions and sustained human presence, increasing levels of autonomy become essential. Far from Earth and constrained by communication delays, robotic systems must perceive their environment, make decisions, and act independently to achieve science and mission objectives. This session will explore the robotics and autonomy technologies NASA and its partners must develop or mature—not only to support the Moon-to-Mars architecture but also to accelerate the transition from initial sorties to a self-sufficient Martian outpost. We will examine how recent advances in AI can drive resilient, adaptable, and intelligent systems that move us closer to this long-term vision."
             />
           </Timeline.Item>
 
@@ -1324,7 +1396,7 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S06 - Software Simulation for Space Robotics</b>
+            <b>S06 - High-Fidelity Simulation and Digital Twins for Space Robotics</b>
             <br/>
             <Time time="3:30 - 5:00 PM PT" />
             {/* Location: TBD */}
@@ -1334,15 +1406,23 @@ export default function Home({ data }) {
               fixedImg={data.lutzRichter.childImageSharp.fixed}
               noMargin={true}
             />
+            <Speaker
+              organizations={["NVIDIA"]}
+              name="Antoine Richard"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Speaker
+              organizations={["University of Wisconsin Madison"]}
+              name="Dan Negrut"
+              fixedImg={data.default.childImageSharp.fixed}
+              noMargin={true}
+            />
             <Abstract
               text="High-fidelity simulation is playing an increasingly critical role in the development, testing, and validation of autonomous robotic systems for space exploration. This session will focus on the state of the art in simulation tools and digital twin frameworks used to model lunar, Martian, and other planetary environments. Topics will include terrain and lighting realism, physics-based simulation, sim-to-real transfer, virtual sensing, and integration of autonomy stacks."
             />
           </Timeline.Item>
         </Timeline>
-      </Section>
-
-      <Section title="Venue">
-        <VenueSection data={data} />
       </Section>
 
       <Section title="Organizers">
