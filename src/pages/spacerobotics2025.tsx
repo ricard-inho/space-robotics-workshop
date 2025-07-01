@@ -958,7 +958,7 @@ export default function Home({ data }) {
       <Alert
         message={
           <>
-            <strong>Registration is now open!</strong> Secure your spot at the 2nd Space Robotics Workshop and take advantage of early rates through June 15. A full SMC-IT/SCC conference registration is required to participate in the workshop. <a href="https://web.cvent.com/event/20ad649d-7501-4023-89af-19fbd851868e/websitePage:f5f1940b-980e-4398-96f6-3b681ef5e4a3?i=EQw8ANtxAkyS2Y_OqYfepA" target="_blank" rel="noopener noreferrer">Register here</a>.
+            <strong>Registration is now open!</strong> Secure your spot at the 2nd Space Robotics Workshop. The Early Bird registration has been extended to July 5th. A full SMC-IT/SCC conference registration is required to participate in the workshop. <a href="https://cvent.me/vAOdOx" target="_blank" rel="noopener noreferrer">Register here</a>.
           </>
         }
         type="success"
@@ -1117,13 +1117,13 @@ export default function Home({ data }) {
             <Speaker
               organizations={["NASA KSC"]}
               name="Rob Mueller"
-              fixedImg={data.default.childImageSharp.fixed}
+              fixedImg={data.robMueller.childImageSharp.fixed}
               noMargin={true}
             />
             <Speaker
               organizations={["Skycorp, Inc"]}
               name="Dennis Wingo"
-              fixedImg={data.default.childImageSharp.fixed}
+              fixedImg={data.dennisWingo.childImageSharp.fixed}
               noMargin={true}
             />
             <Abstract
@@ -1151,7 +1151,7 @@ export default function Home({ data }) {
             {/* Location: TBD */}
             <Speaker
               organizations={["University of Texas at Austin, Apptronik"]}
-              name="Luis Sentis"
+              name="Prof. Luis Sentis"
               fixedImg={data.luisSentis.childImageSharp.fixed}
               noMargin={true}
             />
@@ -1159,6 +1159,12 @@ export default function Home({ data }) {
               organizations={["NASA"]}
               name="Ignacio López-Francos"
               fixedImg={data.ignacioGLopezFrancos.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Speaker
+              organizations={["University of Texas at Austin"]}
+              name="Prof. Maruthi R. Akella"
+              fixedImg={data.maruthiAkella.childImageSharp.fixed}
               noMargin={true}
             />
             <Abstract
@@ -1187,6 +1193,12 @@ export default function Home({ data }) {
               organizations={["Honeybee Robotics (Blue Origin)"]}
               name="Kevin Hubbard"
               fixedImg={data.kevinHubbard.childImageSharp.fixed}
+              noMargin={true}
+            />
+            <Speaker
+              organizations={["University of Southern California (USC)"]}
+              name="Feifei Qian"
+              fixedImg={data.feifeiQian.childImageSharp.fixed}
               noMargin={true}
             />
             <Abstract
@@ -1263,13 +1275,13 @@ export default function Home({ data }) {
             <Speaker
               organizations={["NVIDIA"]}
               name="Antoine Richard"
-              fixedImg={data.default.childImageSharp.fixed}
+              fixedImg={data.antoineRichard.childImageSharp.fixed}
               noMargin={true}
             />
             <Speaker
               organizations={["University of Wisconsin Madison"]}
               name="Dan Negrut"
-              fixedImg={data.default.childImageSharp.fixed}
+              fixedImg={data.danNegrut.childImageSharp.fixed}
               noMargin={true}
             />
             <Abstract
@@ -1542,6 +1554,24 @@ export const query = graphql`
       ...FaceThumbnail
     }
     hiroOno: file(relativePath: { eq: "scientific-committee/hiroOno.jpg" }) {
+      ...FaceThumbnail
+    }
+    robMueller: file(relativePath: { eq: "speakers/robMueller.png" }) {
+      ...FaceThumbnail
+    }
+    dennisWingo: file(relativePath: { eq: "speakers/dennisWingo.png" }) {
+      ...FaceThumbnail
+    }
+    maruthiAkella: file(relativePath: { eq: "speakers/maruthiAkella.png" }) {
+      ...FaceThumbnail
+    }
+    feifeiQian: file(relativePath: { eq: "speakers/feifeiQian.png" }) {
+      ...FaceThumbnail
+    }
+    antoineRichard: file(relativePath: { eq: "speakers/antoineRichard.jpg" }) {
+      ...FaceThumbnail
+    }
+    danNegrut: file(relativePath: { eq: "speakers/danNegrut.jpg" }) {
       ...FaceThumbnail
     }
     
