@@ -815,6 +815,9 @@ function VenueSection({ data }) {
           <p>
             The <a href="https://californiasciencecenter.org/" target="_blank" rel="noopener noreferrer">California Science Center</a> offers a uniquely inspiring venue for the 2nd Space Robotics Workshop. As the permanent home of the Space Shuttle Endeavour, and soon the world's only vertical launch display complete with external tank and solid rocket boosters, it grounds our discussions in the tangible legacy and future of spaceflight. Situated in the heart of Los Angeles, the Center links us to a vibrant ecosystem of innovation, science, and exploration.
           </p>
+          <p>
+            This map is intended to solely show the density of players in the aerospace, robotics, and defense sector and where the workshop will take place. It's not meant to be exhaustive and our organization is not responsible for any missing organizations or misplaced locations.
+          </p>
           <p style={{ fontSize: '14px', color: '#666', fontStyle: 'italic' }}>
             Click on the map to view it in full size.
           </p>
@@ -958,7 +961,7 @@ export default function Home({ data }) {
       <Alert
         message={
           <>
-            <strong>Registration is now open!</strong> Secure your spot at the 2nd Space Robotics Workshop. The Early Bird registration has been extended to July 5th. A full SMC-IT/SCC conference registration is required to participate in the workshop. <a href="https://cvent.me/vAOdOx" target="_blank" rel="noopener noreferrer">Register here</a>.
+            <strong>Registration is now open!</strong> Secure your spot at the 2nd Space Robotics Workshop. <strong>A full SMC-IT/SCC conference registration is required to participate in the workshop.</strong> <a href="https://cvent.me/vAOdOx" target="_blank" rel="noopener noreferrer">Register here</a>.
           </>
         }
         type="success"
@@ -1106,6 +1109,9 @@ export default function Home({ data }) {
       </Section>
 
       <Section title="Workshop Schedule">
+        <p><strong>Coming soon</strong> - The detailed workshop schedule will be announced shortly.</p>
+        
+        {/* 
         <h2>Day 1 - July 28</h2>
         <Timeline>
           <Timeline.Item>
@@ -1141,14 +1147,12 @@ export default function Home({ data }) {
             <b>Spotlight talks</b>
             <br/>
             <Time time="1:00 - 1:30 PM PT" />
-            {/* Location: TBD */}
           </Timeline.Item>
 
           <Timeline.Item>
             <b>S02 - Mars Settlement Starts with Autonomy and Robotics</b>
             <br/>
             <Time time="1:30 - 3:00 PM PT" />
-            {/* Location: TBD */}
             <Speaker
               organizations={["University of Texas at Austin, Apptronik"]}
               name="Prof. Luis Sentis"
@@ -1182,7 +1186,6 @@ export default function Home({ data }) {
             <b>S03 - One-Shot Interplanetary Exploration With Software-Defined Robotic Systems</b>
             <br/>
             <Time time="3:30 - 5:00 PM PT" />
-            {/* Location: TBD */}
             <Speaker
               organizations={["NASA JPL"]}
               name="Hiro Ono"
@@ -1236,14 +1239,12 @@ export default function Home({ data }) {
             <b>Spotlight talks</b>
             <br/>
             <Time time="1:00 - 1:30 PM PT" />
-            {/* Location: TBD */}
           </Timeline.Item>
 
           <Timeline.Item>
             <b>S05 - Embodied AI: Toward General-Purpose Robots</b>
             <br/>
             <Time time="1:30 - 3:00 PM PT" />
-            {/* Location: TBD */}
             <Speaker
               organizations={["Georgia Tech, NVIDIA"]}
               name="Animesh Garg"
@@ -1265,7 +1266,6 @@ export default function Home({ data }) {
             <b>S06 - High-Fidelity Simulation and Digital Twins for Space Robotics</b>
             <br/>
             <Time time="3:30 - 5:00 PM PT" />
-            {/* Location: TBD */}
             <Speaker
               organizations={["SoftServe"]}
               name="Lutz Richter"
@@ -1289,6 +1289,7 @@ export default function Home({ data }) {
             />
           </Timeline.Item>
         </Timeline>
+        */}
       </Section>
 
       <Section title="Call for Papers">
@@ -1437,6 +1438,10 @@ export default function Home({ data }) {
             📩 <a href="mailto:marcel.kaufmann@jpl.nasa.gov">marcel.kaufmann@jpl.nasa.gov</a>
           </p>
         </div>
+      </Section>
+
+      <Section title="Accepted Papers">
+        <p><strong>Coming soon</strong> - The list of accepted papers will be announced shortly.</p>
       </Section>
 
       <Section title="Organizers">
