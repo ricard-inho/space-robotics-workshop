@@ -1108,6 +1108,109 @@ export default function Home({ data }) {
         <VenueSection data={data} />
       </Section>
 
+      <Section title="Confirmed Speakers">
+        <p>
+          We are pleased to announce our confirmed speakers for the 2nd Space Robotics Workshop:
+        </p>
+        <div className={style.speakersGrid} style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', 
+          gap: '20px', 
+          marginTop: '30px' 
+        }}>
+          <Speaker
+            organizations={["University of Texas at Austin"]}
+            name="Maruthi R. Akella"
+            fixedImg={data.maruthiAkella.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["UC Berkeley"]}
+            name="Lindy Elkins-Tanton"
+            fixedImg={data.lindyElkinsTanton.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["UCLA"]}
+            name="Dennis Hong"
+            fixedImg={data.dennisHong.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["Honeybee Robotics"]}
+            name="Kevin Hubbard"
+            fixedImg={data.kevinHubbard.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["SETI Institute / Mars Institute"]}
+            name="Pascal Lee"
+            fixedImg={data.pascalLee.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["NASA"]}
+            name="Ignacio López-Francos"
+            fixedImg={data.ignacioGLopezFrancos.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["NASA"]}
+            name="Rob Mueller"
+            fixedImg={data.robMueller.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["University of Wisconsin-Madison"]}
+            name="Dan Negrut"
+            fixedImg={data.danNegrut.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["NASA JPL"]}
+            name="Hiro Ono"
+            fixedImg={data.hiroOno.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["USC"]}
+            name="Feifei Qian"
+            fixedImg={data.feifeiQian.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["SoftServe"]}
+            name="Lutz Richter"
+            fixedImg={data.lutzRichter.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["Aurelia Institute"]}
+            name="Annika Rollock"
+            fixedImg={data.annikaRollock.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["University of Texas at Austin"]}
+            name="Luis Sentis"
+            fixedImg={data.luisSentis.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["NVIDIA"]}
+            name="Yue Wang"
+            fixedImg={data.yueWang.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["Skycorp"]}
+            name="Dennis Wingo"
+            fixedImg={data.dennisWingo.childImageSharp.fixed}
+            noMargin={true}
+          />
+        </div>
+      </Section>
+
       <Section title="Workshop Schedule">
         <p><strong>Coming soon</strong> - The detailed workshop schedule will be announced shortly.</p>
         
@@ -1414,11 +1517,11 @@ export default function Home({ data }) {
               <tr>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Paper Submission deadline</td>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>May 23</strong></td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong> June 6</td>
               </tr>
               <tr>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>Acceptance Notification</td>
-                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong>  June 6</td>
+                <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}><strong>June 13</strong> June 6</td>
                 <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>June 20</td>
               </tr>
               <tr>
@@ -1688,6 +1791,21 @@ export const query = graphql`
       ...FaceThumbnail
     }
     kevinHubbard: file(relativePath: { eq: "speakers/kevinHubbard.jpg" }) {
+      ...FaceThumbnail
+    }
+    dennisHong: file(relativePath: { eq: "speakers/dennisHong.jpg" }) {
+      ...FaceThumbnail
+    }
+    yueWang: file(relativePath: { eq: "speakers/yueWang.png" }) {
+      ...FaceThumbnail
+    }
+    annikaRollock: file(relativePath: { eq: "speakers/annikaRollock.png" }) {
+      ...FaceThumbnail
+    }
+    lindyElkinsTanton: file(relativePath: { eq: "speakers/lindyElkinsTanton.png" }) {
+      ...FaceThumbnail
+    }
+    pascalLee: file(relativePath: { eq: "speakers/pascalLee.jpg" }) {
       ...FaceThumbnail
     }
   }
