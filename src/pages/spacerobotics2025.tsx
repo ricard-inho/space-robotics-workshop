@@ -1137,15 +1137,9 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["Honey Robotics"]}
+            organizations={["Honeybee Robotics (Blue Origin)"]}
             name="Dean Bergman"
             fixedImg={data.deanBergman.childImageSharp.fixed}
-            noMargin={true}
-          />
-          <Speaker
-            organizations={["AstroForge"]}
-            name="Matt Gialich"
-            fixedImg={data.mattGialich.childImageSharp.fixed}
             noMargin={true}
           />
           <Speaker
@@ -1244,6 +1238,32 @@ export default function Home({ data }) {
                 <strong>Session Chair:</strong> Maggie Wang (Stanford)
               </div>
             </div>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.dennisWingo.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Dennis Wingo</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.graceGao.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Grace Gao</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.robMueller.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Rob Mueller</span>
+                </div>
+              </div>
+            </div>
             <Abstract
               text="The mineral resource map of our solar system is still largely blank, leaving the scientific, economic, and strategic value of lunar terrain—and of nearby asteroids—uncertain. This uncertainty is especially critical for New Space companies pursuing high-value offworld resources such as volatiles, He-3, and other exotic materials. Unlocking that potential and avoiding scarcity-driven competition will require advanced robotic automation and autonomy—not only to detect, assess, and extract these resources but also to build the infrastructure needed to operate at economic scale. The technologies pioneered for lunar and asteroid exploration are poised to reshape terrestrial workflows as well, fostering innovation and abundance both on Earth and beyond. This session surveys prioritized lunar resource models alongside the enabling robotic technologies that can realize a sustainable offworld economy."
             />
@@ -1271,6 +1291,32 @@ export default function Home({ data }) {
                 <strong>Session Chair:</strong> Luis Sentis (University of Texas at Austin / Apptronik)
               </div>
             </div>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.ignacioGLopezFrancos.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Ignacio López-Francos</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.maruthiAkella.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Maruthi R. Akella</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.pascalLee.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Pascal Lee</span>
+                </div>
+              </div>
+            </div>
             <Abstract
               text="As we extend robotic exploration to Mars and lay the groundwork for crewed missions and sustained human presence, increasing levels of autonomy become essential. Far from Earth and constrained by communication delays, robotic systems must perceive their environment, make decisions, and act independently to achieve science and mission objectives. This session will explore the robotics and autonomy technologies NASA and its partners must develop or mature—not only to support the Moon-to-Mars architecture but also to accelerate the transition from initial sorties to a self-sufficient Martian outpost. We will examine how recent advances in AI can drive resilient, adaptable, and intelligent systems that move us closer to this long-term vision."
             />
@@ -1290,6 +1336,25 @@ export default function Home({ data }) {
               </div>
               <div>
                 <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
+              </div>
+            </div>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.annikaRollock.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Annika Rollock</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.lindyElkinsTanton.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Lindy Elkins-Tanton</span>
+                </div>
               </div>
             </div>
             <Abstract
@@ -1319,6 +1384,25 @@ export default function Home({ data }) {
                 <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
               </div>
             </div>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.deanBergman.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Dean Bergman</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.feifeiQian.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Feifei Qian</span>
+                </div>
+              </div>
+            </div>
             <Abstract
               text="As we look beyond Mars toward the outer Solar System, the traditional model of incremental mission development becomes infeasible. This session will explore emerging concepts for adaptive, autonomous robotic systems capable of operating in unknown and extreme environments with minimal prior knowledge or ground intervention. Discussions will center on architectural principles, enabling technologies, and cross-disciplinary insights—from robotics and AI to planetary science and evolutionary biology—that could support one-shot missions to unvisited worlds."
             />
@@ -1341,6 +1425,25 @@ export default function Home({ data }) {
               </div>
               <div>
                 <strong>Session Chair:</strong> Lutz Richter (SoftServe)
+              </div>
+            </div>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.danNegrut.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Dan Negrut</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.yueWang.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                  />
+                  <span>Yue Wang</span>
+                </div>
               </div>
             </div>
             <Abstract
@@ -1797,9 +1900,6 @@ export const query = graphql`
       ...FaceThumbnail
     }
     deanBergman: file(relativePath: { eq: "speakers/deanBergman.jpg" }) {
-      ...FaceThumbnail
-    }
-    mattGialich: file(relativePath: { eq: "speakers/mattGialich.jpg" }) {
       ...FaceThumbnail
     }
     graceGao: file(relativePath: { eq: "speakers/graceGao.jpg" }) {
