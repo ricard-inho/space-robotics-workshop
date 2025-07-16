@@ -1137,9 +1137,21 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["Honeybee Robotics"]}
-            name="Kevin Hubbard"
-            fixedImg={data.kevinHubbard.childImageSharp.fixed}
+            organizations={["Honey Robotics"]}
+            name="Dean Bergman"
+            fixedImg={data.deanBergman.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["AstroForge"]}
+            name="Matt Gialich"
+            fixedImg={data.mattGialich.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
+            organizations={["Stanford"]}
+            name="Grace Gao"
+            fixedImg={data.graceGao.childImageSharp.fixed}
             noMargin={true}
           />
           <Speaker
@@ -1211,188 +1223,176 @@ export default function Home({ data }) {
         </div>
       </Section>
 
-      <Section title="Workshop Schedule">
-        <p><strong>Coming soon</strong> - The detailed workshop schedule will be announced shortly.</p>
+      <Section title="Workshop Agenda">
+        <p><strong>All sessions will be held in Room CR4</strong></p>
         
-        {/* 
-        <h2>Day 1 - July 28</h2>
+        <h2>Day 1 - Monday, July 28</h2>
         <Timeline>
           <Timeline.Item>
-            <b>S01 - Lunar Resource Models to Inform Space Robotics</b>
+            <b>Unlocking the Offworld Economy with Robotic Technologies</b>
             <br/>
             <Time time="10:30 AM - 12:00 PM PT" />
-            <br />
-            Room TBD
-            <Speaker
-              organizations={["NASA KSC"]}
-              name="Rob Mueller"
-              fixedImg={data.robMueller.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["Skycorp, Inc"]}
-              name="Dennis Wingo"
-              fixedImg={data.dennisWingo.childImageSharp.fixed}
-              noMargin={true}
-            />
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.maggieWang.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Session Chair:</strong> Maggie Wang (Stanford)
+              </div>
+            </div>
             <Abstract
-              text="The mineral resources map of our solar system is largely blank. These blank spaces are particularly important to new Space companies with a case for high-value Offworld resources (e.g., volatiles, He-3 and other exotic materials). In short, we do not know the scientific, economic or national security value of the terrain that will shape our future as a spacefaring people. Searching and measuring will create a future of abundance for ourselves, not scarcity as we are locked out of future opportunity. In this companion session to S04, we briefly explore concepts of operation for selected lunar resources, as a way of prioritizing Space robotic needs."
+              text="The mineral resource map of our solar system is still largely blank, leaving the scientific, economic, and strategic value of lunar terrain—and of nearby asteroids—uncertain. This uncertainty is especially critical for New Space companies pursuing high-value offworld resources such as volatiles, He-3, and other exotic materials. Unlocking that potential and avoiding scarcity-driven competition will require advanced robotic automation and autonomy—not only to detect, assess, and extract these resources but also to build the infrastructure needed to operate at economic scale. The technologies pioneered for lunar and asteroid exploration are poised to reshape terrestrial workflows as well, fostering innovation and abundance both on Earth and beyond. This session surveys prioritized lunar resource models alongside the enabling robotic technologies that can realize a sustainable offworld economy."
             />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Lunch break</b>
+            <b>Lunch Break</b>
             <br/>
             <Time time="12:00 - 1:00 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Spotlight talks</b>
+            <b>Mars Settlement Starts with Autonomy and Robotics</b>
             <br/>
-            <Time time="1:00 - 1:30 PM PT" />
-          </Timeline.Item>
-
-          <Timeline.Item>
-            <b>S02 - Mars Settlement Starts with Autonomy and Robotics</b>
+            <Time time="1:00 - 2:30 PM PT" />
             <br/>
-            <Time time="1:30 - 3:00 PM PT" />
-            <Speaker
-              organizations={["University of Texas at Austin, Apptronik"]}
-              name="Prof. Luis Sentis"
-              fixedImg={data.luisSentis.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["NASA"]}
-              name="Ignacio López-Francos"
-              fixedImg={data.ignacioGLopezFrancos.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["University of Texas at Austin"]}
-              name="Prof. Maruthi R. Akella"
-              fixedImg={data.maruthiAkella.childImageSharp.fixed}
-              noMargin={true}
-            />
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.luisSentis.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Session Chair:</strong> Luis Sentis (University of Texas at Austin / Apptronik)
+              </div>
+            </div>
             <Abstract
               text="As we extend robotic exploration to Mars and lay the groundwork for crewed missions and sustained human presence, increasing levels of autonomy become essential. Far from Earth and constrained by communication delays, robotic systems must perceive their environment, make decisions, and act independently to achieve science and mission objectives. This session will explore the robotics and autonomy technologies NASA and its partners must develop or mature—not only to support the Moon-to-Mars architecture but also to accelerate the transition from initial sorties to a self-sufficient Martian outpost. We will examine how recent advances in AI can drive resilient, adaptable, and intelligent systems that move us closer to this long-term vision."
             />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Coffee break</b>
+            <b>One-Shot Interplanetary Exploration With Software-Defined Robotic Systems (Part 1)</b>
+            <br/>
+            <Time time="2:30 - 3:00 PM PT" />
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.hiroOno.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
+              </div>
+            </div>
+            <Abstract
+              text="As we look beyond Mars toward the outer Solar System, the traditional model of incremental mission development becomes infeasible. This session will explore emerging concepts for adaptive, autonomous robotic systems capable of operating in unknown and extreme environments with minimal prior knowledge or ground intervention. Discussions will center on architectural principles, enabling technologies, and cross-disciplinary insights—from robotics and AI to planetary science and evolutionary biology—that could support one-shot missions to unvisited worlds."
+            />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Coffee Break</b>
             <br/>
             <Time time="3:00 - 3:30 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S03 - One-Shot Interplanetary Exploration With Software-Defined Robotic Systems</b>
+            <b>One-Shot Interplanetary Exploration With Software-Defined Robotic Systems (Part 2)</b>
             <br/>
             <Time time="3:30 - 5:00 PM PT" />
-            <Speaker
-              organizations={["NASA JPL"]}
-              name="Hiro Ono"
-              fixedImg={data.hiroOno.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["Honeybee Robotics (Blue Origin)"]}
-              name="Kevin Hubbard"
-              fixedImg={data.kevinHubbard.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["University of Southern California (USC)"]}
-              name="Feifei Qian"
-              fixedImg={data.feifeiQian.childImageSharp.fixed}
-              noMargin={true}
-            />
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.hiroOno.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
+              </div>
+            </div>
             <Abstract
               text="As we look beyond Mars toward the outer Solar System, the traditional model of incremental mission development becomes infeasible. This session will explore emerging concepts for adaptive, autonomous robotic systems capable of operating in unknown and extreme environments with minimal prior knowledge or ground intervention. Discussions will center on architectural principles, enabling technologies, and cross-disciplinary insights—from robotics and AI to planetary science and evolutionary biology—that could support one-shot missions to unvisited worlds."
             />
           </Timeline.Item>
         </Timeline>
 
-        <h2>Day 2 - July 29</h2>
+        <h2>Day 2 - Tuesday, July 29</h2>
         <Timeline>
           <Timeline.Item>
-            <b>S04 - Enabling Technology for Lunar Resources</b>
+            <b>High-Fidelity Simulation and Digital Twins for Space Robotics</b>
             <br/>
             <Time time="10:30 AM - 12:00 PM PT" />
-            <br />
-            Room TBD
-            <Speaker
-              organizations={[""]}
-              name="TBD"
-              fixedImg={data.default.childImageSharp.fixed}
-              noMargin={true}
-            />
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.lutzRichter.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Session Chair:</strong> Lutz Richter (SoftServe)
+              </div>
+            </div>
             <Abstract
-              text="Humans cannot build a spacefaring future alone, one camera or wrench or at a time in hostile environments far from Earth. We need robotic automation to detect, assess and extract resources, and to build structures and execute processes at economic scales. The robotics and autonomy needed to make an Offworld economy possible might also revolutionize our terrestrial workflows. In this companion session to S01, we briefly explore the enabling technologies required for lunar resource utilization."
+              text="High-fidelity simulation is playing an increasingly critical role in the development, testing, and validation of autonomous robotic systems for space exploration. This session will focus on the state of the art in simulation tools and digital twin frameworks used to model lunar, Martian, and other planetary environments. Topics will include terrain and lighting realism, physics-based simulation, sim-to-real transfer, virtual sensing, and integration of autonomy stacks."
             />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Lunch break</b>
+            <b>Lunch Break</b>
             <br/>
             <Time time="12:00 - 1:00 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Spotlight talks</b>
+            <b>Special Session: TBD</b>
             <br/>
-            <Time time="1:00 - 1:30 PM PT" />
+            <Time time="1:00 - 2:00 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S05 - Embodied AI: Toward General-Purpose Robots</b>
+            <b>Spotlight Talks (Part 1) - Titles coming soon!</b>
             <br/>
-            <Time time="1:30 - 3:00 PM PT" />
-            <Speaker
-              organizations={["Georgia Tech, NVIDIA"]}
-              name="Animesh Garg"
-              fixedImg={data.animeshGarg.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Abstract
-              text="This session examines recent progress at the intersection of AI and robotics, covering advances in Vision-Language-Action Models, Large-Scale Embodied Agents, Dexterous Manipulation, Reinforcement Learning and Sim-to-Real Transfer. These developments are accelerating the deployment of generalist agents capable of perception, reasoning, and control across diverse tasks and embodiments. Talks will focus on how these capabilities are reshaping robotic autonomy, shortening the transition from research to deployment, and informing the path toward general-purpose systems—both on Earth and in space."
-            />
+            <Time time="2:00 - 3:00 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Coffee break</b>
+            <b>Coffee Break</b>
             <br/>
             <Time time="3:00 - 3:30 PM PT" />
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>S06 - High-Fidelity Simulation and Digital Twins for Space Robotics</b>
+            <b>Spotlight Talks (Part 2) - Titles coming soon!</b>
             <br/>
-            <Time time="3:30 - 5:00 PM PT" />
-            <Speaker
-              organizations={["SoftServe"]}
-              name="Lutz Richter"
-              fixedImg={data.lutzRichter.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["NVIDIA"]}
-              name="Antoine Richard"
-              fixedImg={data.antoineRichard.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Speaker
-              organizations={["University of Wisconsin Madison"]}
-              name="Dan Negrut"
-              fixedImg={data.danNegrut.childImageSharp.fixed}
-              noMargin={true}
-            />
-            <Abstract
-              text="High-fidelity simulation is playing an increasingly critical role in the development, testing, and validation of autonomous robotic systems for space exploration. This session will focus on the state of the art in simulation tools and digital twin frameworks used to model lunar, Martian, and other planetary environments. Topics will include terrain and lighting realism, physics-based simulation, sim-to-real transfer, virtual sensing, and integration of autonomy stacks."
-            />
+            <Time time="3:30 - 4:30 PM PT" />
+          </Timeline.Item>
+
+          <Timeline.Item>
+            <b>Best Paper Award + Closing Remarks</b>
+            <br/>
+            <Time time="4:30 - 5:00 PM PT" />
           </Timeline.Item>
         </Timeline>
-        */}
+
+        <h2>Day 3 - Wednesday, July 30 (Optional)</h2>
+        <Timeline>
+          <Timeline.Item>
+            <b>Tours (limited capacity & pre-registration required)</b>
+            <br/>
+            <Time time="Morning - Afternoon" />
+          </Timeline.Item>
+        </Timeline>
       </Section>
 
       <Section title="Call for Papers">
@@ -1655,6 +1655,9 @@ export const query = graphql`
     default: file(relativePath: { eq: "spacerobotics2025/default.jpeg" }) {
       ...FaceThumbnail
     }
+    maggieWang: file(relativePath: { eq: "organizers/maggieWang.jpg" }) {
+      ...FaceThumbnail
+    }
     luisSentis: file(relativePath: { eq: "scientific-committee/luisSentis.png" }) {
       ...FaceThumbnail
     }
@@ -1790,10 +1793,16 @@ export const query = graphql`
     lutzRichter: file(relativePath: { eq: "speakers/lutzRichter.png" }) {
       ...FaceThumbnail
     }
-    kevinHubbard: file(relativePath: { eq: "speakers/kevinHubbard.jpg" }) {
+    dennisHong: file(relativePath: { eq: "speakers/dennisHong.jpg" }) {
       ...FaceThumbnail
     }
-    dennisHong: file(relativePath: { eq: "speakers/dennisHong.jpg" }) {
+    deanBergman: file(relativePath: { eq: "speakers/deanBergman.jpg" }) {
+      ...FaceThumbnail
+    }
+    mattGialich: file(relativePath: { eq: "speakers/mattGialich.jpg" }) {
+      ...FaceThumbnail
+    }
+    graceGao: file(relativePath: { eq: "speakers/graceGao.jpg" }) {
       ...FaceThumbnail
     }
     yueWang: file(relativePath: { eq: "speakers/yueWang.png" }) {
