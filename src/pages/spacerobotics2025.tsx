@@ -1244,21 +1244,21 @@ export default function Home({ data }) {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.dennisWingo.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Dennis Wingo</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.graceGao.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Grace Gao</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.robMueller.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Rob Mueller</span>
                 </div>
@@ -1297,21 +1297,21 @@ export default function Home({ data }) {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.ignacioGLopezFrancos.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Ignacio López-Francos</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.maruthiAkella.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Maruthi R. Akella</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.pascalLee.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Pascal Lee</span>
                 </div>
@@ -1344,14 +1344,14 @@ export default function Home({ data }) {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.annikaRollock.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Annika Rollock</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.lindyElkinsTanton.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Lindy Elkins-Tanton</span>
                 </div>
@@ -1390,14 +1390,14 @@ export default function Home({ data }) {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.deanBergman.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Dean Bergman</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.feifeiQian.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Feifei Qian</span>
                 </div>
@@ -1433,14 +1433,14 @@ export default function Home({ data }) {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.danNegrut.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Dan Negrut</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.yueWang.childImageSharp.fixed} 
-                    style={{ borderRadius: '50%', width: '30px', height: '30px', marginRight: '8px' }}
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Yue Wang</span>
                 </div>
