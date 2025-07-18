@@ -1214,6 +1214,12 @@ export default function Home({ data }) {
             fixedImg={data.dennisWingo.childImageSharp.fixed}
             noMargin={true}
           />
+          <Speaker
+            organizations={["NASA"]}
+            name="Brice Howard"
+            fixedImg={data.briceHoward.childImageSharp.fixed}
+            noMargin={true}
+          />
         </div>
       </Section>
 
@@ -1246,21 +1252,28 @@ export default function Home({ data }) {
                     fixed={data.dennisWingo.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Dennis Wingo</span>
+                  <span>Dennis Wingo (Skycorp)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.graceGao.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Grace Gao</span>
+                  <span>Grace Gao (Stanford)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.robMueller.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Rob Mueller</span>
+                  <span>Rob Mueller (NASA)</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.briceHoward.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Brice Howard (NASA)</span>
                 </div>
               </div>
             </div>
@@ -1299,21 +1312,21 @@ export default function Home({ data }) {
                     fixed={data.ignacioGLopezFrancos.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Ignacio López-Francos</span>
+                  <span>Ignacio López-Francos (NASA)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.maruthiAkella.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Maruthi R. Akella</span>
+                  <span>Maruthi R. Akella (University of Texas at Austin)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.pascalLee.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Pascal Lee</span>
+                  <span>Pascal Lee (SETI Institute / Mars Institute)</span>
                 </div>
               </div>
             </div>
@@ -1346,14 +1359,14 @@ export default function Home({ data }) {
                     fixed={data.annikaRollock.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Annika Rollock</span>
+                  <span>Annika Rollock (Aurelia Institute)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.lindyElkinsTanton.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Lindy Elkins-Tanton</span>
+                  <span>Lindy Elkins-Tanton (UC Berkeley)</span>
                 </div>
               </div>
             </div>
@@ -1392,14 +1405,14 @@ export default function Home({ data }) {
                     fixed={data.deanBergman.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Dean Bergman</span>
+                  <span>Dean Bergman (Honeybee Robotics / Blue Origin)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.feifeiQian.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Feifei Qian</span>
+                  <span>Feifei Qian (USC)</span>
                 </div>
               </div>
             </div>
@@ -1435,14 +1448,14 @@ export default function Home({ data }) {
                     fixed={data.danNegrut.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Dan Negrut</span>
+                  <span>Dan Negrut (University of Wisconsin-Madison)</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.yueWang.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Yue Wang</span>
+                  <span>Yue Wang (NVIDIA)</span>
                 </div>
               </div>
             </div>
@@ -1458,9 +1471,29 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Special Session: TBD</b>
+            <b>Special Session: State of (Space) Robotics</b>
             <br/>
             <Time time="1:00 - 2:00 PM PT" />
+            <br/>
+            <div style={{ marginBottom: '15px' }}>
+              <strong>Speakers:</strong>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.dennisHong.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Dennis Hong (UCLA)</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.briceHoward.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Brice Howard (NASA)</span>
+                </div>
+              </div>
+            </div>
           </Timeline.Item>
 
           <Timeline.Item>
@@ -1681,7 +1714,7 @@ export default function Home({ data }) {
           </li>
           
           <li>
-            <strong>"An Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> <em>(conditionally accepted)</em> – Jordan Kam, Andres Mora Vargas, Brian Coltin, Stephanie Woodman
+            <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> <em></em> – Jordan Kam, Andres Mora Vargas, Brian Coltin, Stephanie Woodman
           </li>
         </ul>
       </Section>
@@ -1952,6 +1985,17 @@ export const query = graphql`
     }
     pascalLee: file(relativePath: { eq: "speakers/pascalLee.jpg" }) {
       ...FaceThumbnail
+    }
+    briceHoward: file(relativePath: { eq: "speakers/briceHoward.jpeg" }) {
+      ...FaceThumbnail
+    }
+
+    # Scientific committee pictures
+    andyHockOrg: file(relativePath: { eq: "scientific-committee/andyHock.jpg" }) {
+      ...FluidImage
+    }
+    edwardBalabanOrg: file(relativePath: { eq: "scientific-committee/edwardBalaban.jpeg" }) {
+      ...FluidImage
     }
   }
 `;

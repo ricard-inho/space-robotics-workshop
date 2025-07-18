@@ -260,6 +260,15 @@ const spacerobotics2025metadata = {
       sc: true,
       site: "",
     },
+    {
+      challenge: false,
+      imageId: "andyHock",
+      name: "Andy Hock",
+      oc: false,
+      organization: "NASA JPL",
+      sc: true,
+      site: "",
+    },
   ],
 };
 
