@@ -1647,7 +1647,43 @@ export default function Home({ data }) {
       </Section>
 
       <Section title="Accepted Papers">
-        <p><strong>Coming soon</strong> - The list of accepted papers will be announced shortly.</p>
+        <p>
+          <strong>Congratulations to all the authors whose work was selected!</strong> Thank you to everyone who submitted, and to our reviewers for their valuable feedback and dedication to maintaining the quality of the workshop.
+        </p>
+        
+        <ul style={{ marginTop: '20px', lineHeight: '1.8' }}>
+          <li>
+            <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish
+          </li>
+          
+          <li>
+            <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham, Ryan Soussan, Brian Coltin, Hoyeong Chun, Pyojin Kim
+          </li>
+          
+          <li>
+            <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi, Seang Shim, Yusuke Sawanishi, Hideki Yoshikado, Masaru Ishida, Noritsuna Imamura, Sumio Morioka, Shin-Ichiro Sakai, Takahiro Inagawa
+          </li>
+          
+          <li>
+            <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello, Caroline Specht, Margherita Piccinin, Hrishik Mishra, Marco De Stefano, Martin Stelzer
+          </li>
+          
+          <li>
+            <strong>"Adaptive Science Operations in Deep Space Missions using Robust Precomputed Autonomy"</strong> – Grace Kim, Hailey Warner, Duncan Eddy, Mykel Kochenderfer, Evan Astle, Zachary Booth, Edward Balaban
+          </li>
+          
+          <li>
+            <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam, Kathryn Hamilton, Brian Coltin, Trey Smith
+          </li>
+          
+          <li>
+            <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy, Landry Reynard, Andrea Guerrieri, Benny Cheng, Wen-Mei Hwu
+          </li>
+          
+          <li>
+            <strong>"An Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> <em>(conditionally accepted)</em> – Jordan Kam, Andres Mora Vargas, Brian Coltin, Stephanie Woodman
+          </li>
+        </ul>
       </Section>
 
       <Section title="Organizers">
