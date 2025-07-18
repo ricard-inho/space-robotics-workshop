@@ -1173,9 +1173,9 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["NASA JPL"]}
-            name="Hiro Ono"
-            fixedImg={data.hiroOno.childImageSharp.fixed}
+            organizations={["Sentric Solutions"]}
+            name="Brice Howard"
+            fixedImg={data.briceHoward.childImageSharp.fixed}
             noMargin={true}
           />
           <Speaker
@@ -1215,9 +1215,9 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["NASA"]}
-            name="Brice Howard"
-            fixedImg={data.briceHoward.childImageSharp.fixed}
+            organizations={["NASA JPL"]}
+            name="Hiro Ono"
+            fixedImg={data.hiroOno.childImageSharp.fixed}
             noMargin={true}
           />
         </div>
@@ -1229,9 +1229,27 @@ export default function Home({ data }) {
         <h2>Day 1 - Monday, July 28</h2>
         <Timeline>
           <Timeline.Item>
+            <b>Opening Remarks</b>
+            <br/>
+            <Time time="10:30 - 10:35 AM PT" />
+            <br/>
+            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
+              <div style={{ marginRight: '10px' }}>
+                <Img 
+                  fixed={data.ignacioGLopezFrancos.childImageSharp.fixed} 
+                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
+                />
+              </div>
+              <div>
+                <strong>Speaker:</strong> Ignacio López-Francos (NASA)
+              </div>
+            </div>
+          </Timeline.Item>
+
+          <Timeline.Item>
             <b>Unlocking the Offworld Economy with Robotic Technologies</b>
             <br/>
-            <Time time="10:30 AM - 12:00 PM PT" />
+            <Time time="10:35 AM - 12:00 PM PT" />
             <br/>
             <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
               <div style={{ marginRight: '10px' }}>
@@ -1273,7 +1291,7 @@ export default function Home({ data }) {
                     fixed={data.briceHoward.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Brice Howard (NASA)</span>
+                  <span>Brice Howard (Sentric Solutions)</span>
                 </div>
               </div>
             </div>
@@ -1490,7 +1508,7 @@ export default function Home({ data }) {
                     fixed={data.briceHoward.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Brice Howard (NASA)</span>
+                  <span>Brice Howard (Sentric Solutions)</span>
                 </div>
               </div>
             </div>
