@@ -265,7 +265,7 @@ const spacerobotics2025metadata = {
       imageId: "andyHock",
       name: "Andy Hock",
       oc: false,
-      organization: "NASA JPL",
+      organization: "Cerebras",
       sc: true,
       site: "",
     },

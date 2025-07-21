@@ -1179,6 +1179,12 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
+            organizations={["NASA JPL"]}
+            name="Hiro Ono"
+            fixedImg={data.hiroOno.childImageSharp.fixed}
+            noMargin={true}
+          />
+          <Speaker
             organizations={["USC"]}
             name="Feifei Qian"
             fixedImg={data.feifeiQian.childImageSharp.fixed}
@@ -1215,11 +1221,12 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["NASA JPL"]}
-            name="Hiro Ono"
-            fixedImg={data.hiroOno.childImageSharp.fixed}
+            organizations={["Starpath Robotics"]}
+            name="Brian Yamauchi"
+            fixedImg={data.brianYamauchi.childImageSharp.fixed}
             noMargin={true}
           />
+
         </div>
       </Section>
 
@@ -1292,6 +1299,13 @@ export default function Home({ data }) {
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
                   <span>Brice Howard (Sentric Solutions)</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.brianYamauchi.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Brian Yamauchi (Starpath Robotics)</span>
                 </div>
               </div>
             </div>
@@ -1489,7 +1503,7 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Special Session: State of (Space) Robotics</b>
+            <b>Special Session: Earth and Beyond: The State of Robotics</b>
             <br/>
             <Time time="1:00 - 2:00 PM PT" />
             <br/>
@@ -1515,9 +1529,24 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Spotlight Talks (Part 1) - Titles coming soon!</b>
+            <b>Spotlight Talks (Part 1)</b>
             <br/>
             <Time time="2:00 - 3:00 PM PT" />
+            <br/>
+            <div style={{ marginTop: '15px', marginLeft: '20px' }}>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="2:00 PM" /> – <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="2:15 PM" /> – <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="2:30 PM" /> – <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="2:45 PM" /> – <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> – Jordan Kam
+              </div>
+            </div>
           </Timeline.Item>
 
           <Timeline.Item>
@@ -1527,9 +1556,24 @@ export default function Home({ data }) {
           </Timeline.Item>
 
           <Timeline.Item>
-            <b>Spotlight Talks (Part 2) - Titles coming soon!</b>
+            <b>Spotlight Talks (Part 2)</b>
             <br/>
             <Time time="3:30 - 4:30 PM PT" />
+            <br/>
+            <div style={{ marginTop: '15px', marginLeft: '20px' }}>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="3:30 PM" /> – <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="3:45 PM" /> – <strong>"Adaptive Science Operations in Deep Space Missions using Robust Precomputed Autonomy"</strong> – Grace Kim
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="4:00 PM" /> – <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <Time time="4:15 PM" /> – <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam
+              </div>
+            </div>
           </Timeline.Item>
 
           <Timeline.Item>
@@ -2005,6 +2049,9 @@ export const query = graphql`
       ...FaceThumbnail
     }
     briceHoward: file(relativePath: { eq: "speakers/briceHoward.jpeg" }) {
+      ...FaceThumbnail
+    }
+    brianYamauchi: file(relativePath: { eq: "speakers/brianYamauchi.jpg" }) {
       ...FaceThumbnail
     }
 
