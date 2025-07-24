@@ -1209,7 +1209,7 @@ export default function Home({ data }) {
             noMargin={true}
           />
           <Speaker
-            organizations={["NVIDIA"]}
+            organizations={["USC", "NVIDIA"]}
             name="Yue Wang"
             fixedImg={data.yueWang.childImageSharp.fixed}
             noMargin={true}
@@ -1258,20 +1258,16 @@ export default function Home({ data }) {
             <br/>
             <Time time="10:35 AM - 12:00 PM PT" />
             <br/>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
-              <div style={{ marginRight: '10px' }}>
-                <Img 
-                  fixed={data.maggieWang.childImageSharp.fixed} 
-                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
-                />
-              </div>
-              <div>
-                <strong>Session Chair:</strong> Maggie Wang (Stanford)
-              </div>
-            </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.maggieWang.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Maggie Wang (Stanford) <em>(Session Chair)</em></span>
+                </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.dennisWingo.childImageSharp.fixed} 
@@ -1325,20 +1321,16 @@ export default function Home({ data }) {
             <br/>
             <Time time="1:00 - 2:30 PM PT" />
             <br/>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
-              <div style={{ marginRight: '10px' }}>
-                <Img 
-                  fixed={data.luisSentis.childImageSharp.fixed} 
-                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
-                />
-              </div>
-              <div>
-                <strong>Session Chair:</strong> Luis Sentis (University of Texas at Austin / Apptronik)
-              </div>
-            </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.luisSentis.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Luis Sentis (University of Texas at Austin / Apptronik) <em>(Session Chair)</em></span>
+                </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.ignacioGLopezFrancos.childImageSharp.fixed} 
@@ -1372,20 +1364,16 @@ export default function Home({ data }) {
             <br/>
             <Time time="2:30 - 3:00 PM PT" />
             <br/>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
-              <div style={{ marginRight: '10px' }}>
-                <Img 
-                  fixed={data.hiroOno.childImageSharp.fixed} 
-                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
-                />
-              </div>
-              <div>
-                <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
-              </div>
-            </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.hiroOno.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Hiro Ono (NASA JPL) <em>(Session Chair)</em></span>
+                </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.annikaRollock.childImageSharp.fixed} 
@@ -1418,20 +1406,16 @@ export default function Home({ data }) {
             <br/>
             <Time time="3:30 - 5:00 PM PT" />
             <br/>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
-              <div style={{ marginRight: '10px' }}>
-                <Img 
-                  fixed={data.hiroOno.childImageSharp.fixed} 
-                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
-                />
-              </div>
-              <div>
-                <strong>Session Chair:</strong> Hiro Ono (NASA JPL)
-              </div>
-            </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.hiroOno.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Hiro Ono (NASA JPL) <em>(Session Chair)</em></span>
+                </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.deanBergman.childImageSharp.fixed} 
@@ -1461,20 +1445,16 @@ export default function Home({ data }) {
             <br/>
             <Time time="10:30 AM - 12:00 PM PT" />
             <br/>
-            <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px', marginBottom: '15px' }}>
-              <div style={{ marginRight: '10px' }}>
-                <Img 
-                  fixed={data.lutzRichter.childImageSharp.fixed} 
-                  style={{ borderRadius: '50%', width: '40px', height: '40px' }}
-                />
-              </div>
-              <div>
-                <strong>Session Chair:</strong> Lutz Richter (SoftServe)
-              </div>
-            </div>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <Img 
+                    fixed={data.lutzRichter.childImageSharp.fixed} 
+                    style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
+                  />
+                  <span>Lutz Richter (SoftServe) <em>(Session Chair)</em></span>
+                </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <Img 
                     fixed={data.danNegrut.childImageSharp.fixed} 
@@ -1487,7 +1467,7 @@ export default function Home({ data }) {
                     fixed={data.yueWang.childImageSharp.fixed} 
                     style={{ borderRadius: '50%', width: '40px', height: '40px', marginRight: '8px' }}
                   />
-                  <span>Yue Wang (NVIDIA)</span>
+                  <span>Yue Wang (USC, NVIDIA)</span>
                 </div>
               </div>
             </div>
@@ -1507,7 +1487,7 @@ export default function Home({ data }) {
             <br/>
             <Time time="1:00 - 2:00 PM PT" />
             <br/>
-            <div style={{ marginBottom: '15px' }}>
+            <div style={{ marginBottom: '15px', marginTop: '15px' }}>
               <strong>Speakers:</strong>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', marginTop: '10px' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -1526,6 +1506,9 @@ export default function Home({ data }) {
                 </div>
               </div>
             </div>
+            <Abstract
+              text="Robotics is advancing rapidly on Earth, driven by breakthroughs in artificial intelligence and increasingly capable, compact, and cost-effective hardware, including advanced sensors, actuators, and onboard computing. Translating these capabilities into space missions, however, remains challenging due to extreme thermal cycles, radiation, vacuum, abrasive dust, launch and landing stresses, and partial or microgravity conditions. Additionally, space robotics must operate within strict mass, power, and volume constraints; handle significant communication delays and limited bandwidth; and adhere to rigorous reliability standards in environments lacking opportunities for in-situ repair. This session examines terrestrial and space robotics to identify technology gaps and propose strategic directions to accelerate robotic integration into future space exploration."
+            />
           </Timeline.Item>
 
           <Timeline.Item>
@@ -1535,16 +1518,16 @@ export default function Home({ data }) {
             <br/>
             <div style={{ marginTop: '15px', marginLeft: '20px' }}>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:00 PM" /> – <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi
+                <Time time="2:00 PM" /> – <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi (stateofyuta@gmail.com)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:15 PM" /> – <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello
+                <Time time="2:15 PM" /> – <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello (roberto.lampariello@dlr.de)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:30 PM" /> – <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish
+                <Time time="2:30 PM" /> – <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish (Jack.r.naish@gmail.com)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:45 PM" /> – <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> – Jordan Kam
+                <Time time="2:45 PM" /> – <strong>"Adaptive Science Operations in Deep Space Missions Using Offline Belief State Planning"</strong> – Hailey Warner (hlwarner@stanford.edu)
               </div>
             </div>
           </Timeline.Item>
@@ -1562,16 +1545,16 @@ export default function Home({ data }) {
             <br/>
             <div style={{ marginTop: '15px', marginLeft: '20px' }}>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="3:30 PM" /> – <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham
+                <Time time="3:30 PM" /> – <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham (jungilham@gm.gist.ac.kr)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="3:45 PM" /> – <strong>"Adaptive Science Operations in Deep Space Missions using Robust Precomputed Autonomy"</strong> – Grace Kim
+                <Time time="3:45 PM" /> – <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> – Brian Coltin (brian.coltin@nasa.gov) or Jordan Kam (jordan.k.kam@nasa.gov)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="4:00 PM" /> – <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy
+                <Time time="4:00 PM" /> – <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy (mealy@cpp.edu)
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="4:15 PM" /> – <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam
+                <Time time="4:15 PM" /> – <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam (jordan.k.kam@nasa.gov)
               </div>
             </div>
           </Timeline.Item>
