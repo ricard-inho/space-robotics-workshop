@@ -1518,16 +1518,16 @@ export default function Home({ data }) {
             <br/>
             <div style={{ marginTop: '15px', marginLeft: '20px' }}>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:00 PM" /> – <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi (stateofyuta@gmail.com)
+                <Time time="2:00 PM" /> – <strong>"Experimental Study of Magnetically-Actuated Satellite Swarm: Controllability Extension via Time-Integrated Control with Geometry Learning"</strong> – Yuta Takahashi
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:15 PM" /> – <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello (roberto.lampariello@dlr.de)
+                <Time time="2:15 PM" /> – <strong>"Validation and Verification of Safety-Critical Aspects of Autonomy in Orbital Robotics"</strong> – Roberto Lampariello
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:30 PM" /> – <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish (Jack.r.naish@gmail.com)
+                <Time time="2:30 PM" /> – <strong>"Learning Surface and Vertical Mobility for Enceladus Direct Ocean Access"</strong> – Jack Naish
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="2:45 PM" /> – <strong>"Adaptive Science Operations in Deep Space Missions Using Offline Belief State Planning"</strong> – Hailey Warner (hlwarner@stanford.edu)
+                <Time time="2:45 PM" /> – <strong>"Adaptive Science Operations in Deep Space Missions Using Offline Belief State Planning"</strong> – Hailey Warner
               </div>
             </div>
           </Timeline.Item>
@@ -1545,16 +1545,16 @@ export default function Home({ data }) {
             <br/>
             <div style={{ marginTop: '15px', marginLeft: '20px' }}>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="3:30 PM" /> – <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham (jungilham@gm.gist.ac.kr)
+                <Time time="3:30 PM" /> – <strong>"Drift-Free Visual Compass Leveraging Digital Twins for Cluttered Environments"</strong> – Jungil Ham
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="3:45 PM" /> – <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> – Brian Coltin (brian.coltin@nasa.gov) or Jordan Kam (jordan.k.kam@nasa.gov)
+                <Time time="3:45 PM" /> – <strong>"A Rigid-Soft Underactuated Tendon-Driven Gripper Prototype for Free-Flying Manipulation"</strong> – Brian Coltin
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="4:00 PM" /> – <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy (mealy@cpp.edu)
+                <Time time="4:00 PM" /> – <strong>"RA-SR: A 16–32-Channel Low-Power FPGA Multi-Protocol ESC Controller for Space Robotics"</strong> – Mohamed El-Hadedy
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <Time time="4:15 PM" /> – <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam (jordan.k.kam@nasa.gov)
+                <Time time="4:15 PM" /> – <strong>"Free-Flying Intra-Vehicular Robots: A Review"</strong> – Jordan Kam
               </div>
             </div>
           </Timeline.Item>
